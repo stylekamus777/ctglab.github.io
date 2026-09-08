@@ -1,0 +1,224 @@
+/* ==========================================================================
+   Configuración General y Transición
+   ========================================================================== */
+body {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* ==========================================================================
+   Modo Oscuro Base
+   ========================================================================== */
+body.dark-mode {
+  background-color: #121212 !important;
+  color: #e0e0e0 !important;
+}
+
+/* ==========================================================================
+   Menú de Navegación Superior (Navbar)
+   ========================================================================== */
+body.dark-mode .navigation,
+body.dark-mode .navbar,
+body.dark-mode header.navigation {
+  background-color: #1a1a1a !important;
+  border-bottom: 1px solid #2d2d2d !important;
+}
+
+body.dark-mode .navigation .navbar-nav .nav-link,
+body.dark-mode .navbar-nav .nav-link,
+body.dark-mode .navigation a {
+  color: #d1d1d1 !important;
+  font-weight: 500 !important;
+  transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+body.dark-mode .navigation .navbar-nav .nav-link:hover,
+body.dark-mode .navbar-nav .nav-link:hover {
+  color: #e052bf !important;
+}
+
+body.dark-mode .navigation .navbar-nav .nav-item.active .nav-link,
+body.dark-mode .navbar-nav .active > .nav-link {
+  color: #ffffff !important;
+  border-bottom: 2px solid #a82d8b !important;
+}
+
+/* ==========================================================================
+   Banners de Páginas Secundarias (Contact, Publications, Projects, etc.)
+   ========================================================================== */
+body.dark-mode .global-page-header,
+body.dark-mode section.global-page-header,
+body.dark-mode .page-header,
+body.dark-mode section[class*="page-header"],
+body.dark-mode section[class*="banner"] {
+  background-color: #1a1a1a !important;
+  background-image: none !important;
+}
+
+/* ==========================================================================
+   Banner Principal del Home (#hero-area)
+   ========================================================================== */
+/* Solución para anular el background-image inline de #hero-area */
+body.dark-mode #hero-area {
+  position: relative !important;
+  background-color: #121212 !important;
+}
+
+/* Capa de oscurecimiento exclusiva sobre la imagen de banner2.jpg */
+body.dark-mode #hero-area::before {
+  content: "" !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  background-color: rgba(18, 18, 18, 0.88) !important;
+  z-index: 1 !important;
+}
+
+/* Elevar textos y cajas internas por encima de la capa oscura */
+body.dark-mode #hero-area * {
+  position: relative !important;
+  z-index: 2 !important;
+  color: #ffffff !important;
+}
+
+body.dark-mode #hero-area .block {
+  background-color: rgba(30, 30, 30, 0.9) !important;
+  border: 1px solid #333333 !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6) !important;
+}
+
+/* ==========================================================================
+   Estructuras Contenedoras Principales
+   ========================================================================== */
+body.dark-mode #global-header,
+body.dark-mode #footer,
+body.dark-mode footer,
+body.dark-mode section:not(#hero-area),
+body.dark-mode .page-wrapper,
+body.dark-mode .bg-light,
+body.dark-mode .bg-gray {
+  background-color: #121212 !important;
+}
+
+/* ==========================================================================
+   Tarjetas, Bloques y Cajas Generales
+   ========================================================================== */
+body.dark-mode div:not(#hero-area *),
+body.dark-mode article,
+body.dark-mode header,
+body.dark-mode footer,
+body.dark-mode .address-block,
+body.dark-mode .publication-item,
+body.dark-mode .block,
+body.dark-mode .card,
+body.dark-mode .contact-box,
+body.dark-mode .service-item,
+body.dark-mode .portfolio-item {
+  background-color: #1e1e1e !important;
+  border-color: #333333 !important;
+}
+
+/* ==========================================================================
+   Elementos Nativos (<details> y <summary> - Home y Proyectos)
+   ========================================================================== */
+body.dark-mode details,
+body.dark-mode summary {
+  background-color: #1e1e1e !important;
+  color: #ffffff !important;
+  border-color: #333333 !important;
+}
+
+body.dark-mode details summary:hover,
+body.dark-mode details summary:focus,
+body.dark-mode details[open] summary {
+  background-color: #2a2a2a !important;
+  color: #ffffff !important;
+}
+
+body.dark-mode details *,
+body.dark-mode summary * {
+  color: #ffffff !important;
+}
+
+body.dark-mode .project-years {
+  color: #a0a0a0 !important;
+}
+
+/* ==========================================================================
+   Botones e Interacciones Moradas (Identidad Unificada)
+   ========================================================================== */
+body.dark-mode .btn,
+body.dark-mode .btn-main,
+body.dark-mode .btn-secondary,
+body.dark-mode .btn-outline-primary,
+body.dark-mode .btn-sm,
+body.dark-mode button:not(#theme-toggle) {
+  background-color: #8b2471 !important;
+  color: #ffffff !important;
+  border: 1px solid #a82d8b !important;
+  transition: all 0.2s ease-in-out;
+}
+
+body.dark-mode .btn:hover,
+body.dark-mode .btn-main:hover,
+body.dark-mode .btn-secondary:hover,
+body.dark-mode .btn-outline-primary:hover,
+body.dark-mode button:not(#theme-toggle):hover {
+  background-color: #a82d8b !important;
+  color: #ffffff !important;
+  border-color: #c438a3 !important;
+  box-shadow: 0 0 10px rgba(168, 45, 139, 0.5) !important;
+}
+
+/* Enlaces globales */
+body.dark-mode a {
+  color: #c438a3 !important;
+}
+
+body.dark-mode a:hover {
+  color: #e052bf !important;
+}
+
+/* ==========================================================================
+   Cápsulas, Badges y Etiquetas (H2020, PRIN 2022, etc.)
+   ========================================================================== */
+body.dark-mode .badge,
+body.dark-mode .badge-pill,
+body.dark-mode .project-badge,
+body.dark-mode span[class*="badge"] {
+  background: #3b2d54 !important;
+  background-color: #3b2d54 !important;
+  color: #e2d5f8 !important;
+  border: 1px solid #8b2471 !important;
+}
+
+body.dark-mode .project-badge * {
+  color: #e2d5f8 !important;
+}
+
+/* ==========================================================================
+   Tipografía Global
+   ========================================================================== */
+body.dark-mode h1, 
+body.dark-mode h2, 
+body.dark-mode h3, 
+body.dark-mode h4, 
+body.dark-mode h5, 
+body.dark-mode h6,
+body.dark-mode p,
+body.dark-mode li,
+body.dark-mode span,
+body.dark-mode strong,
+body.dark-mode div.address-block * {
+  color: #e0e0e0 !important;
+}
+
+/* ==========================================================================
+   Iconos y Flechas
+   ========================================================================== */
+body.dark-mode i,
+body.dark-mode svg,
+body.dark-mode .project-chevron {
+  filter: invert(1) !important;
+}

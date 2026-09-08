@@ -48,3 +48,26 @@
   ga('create', '{{ .Site.Params.googleAnalitycsID }}', 'auto');
   ga('send', 'pageview');
 </script>
+
+<!-- Script para activar el Modo Oscuro -->
+    <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const toggleBtn = document.getElementById("theme-toggle");
+    const toggleIcon = document.getElementById("theme-toggle-icon");
+    
+    if (localStorage.getItem("theme") === "dark") {
+      document.body.classList.add("dark-mode");
+      if (toggleIcon) toggleIcon.textContent = "☀️";
+    }
+
+    if (toggleBtn) {
+      toggleBtn.addEventListener("click", function () {
+        document.body.classList.toggle("dark-mode");
+        const isDark = document.body.classList.contains("dark-mode");
+        
+        localStorage.setItem("theme", isDark ? "dark" : "light");
+        if (toggleIcon) toggleIcon.textContent = isDark ? "☀️" : "🌙";
+      });
+    }
+  });
+</script>
