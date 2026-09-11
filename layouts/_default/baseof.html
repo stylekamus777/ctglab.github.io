@@ -1,11 +1,44 @@
 <!DOCTYPE html>
-<html lang="{{ with .Site.LanguageCode }}{{ . }}{{ else }}en-US{{ end }}">
-{{- partial "head.html" . -}}
+<html lang="{{ .Site.LanguageCode | default "en" }}">
+  <head>
+    <!-- ANTI-FLICKER CRITICAL SCRIPT & CSS -->
+    <!-- Informs the browser engine that this page supports a native dark canvas -->
+    <meta name="color-scheme" content="light dark">
+    <style>
+      /* Force dark background instantly to prevent white browser canvas rendering during page transitions */
+      html.dark-mode,
+      html.dark-mode body {
+        background-color: #121212 !important;
+        color: #e0e0e0 !important;
+      }
+    </style>
+    <script>
+      (function() {
+        // Read stored preference from local storage and apply class before body renders
+        if (localStorage.getItem("theme") === "dark") {
+          document.documentElement.classList.add("dark-mode");
+        }
+      })();
+    </script>
 
-<body>
-  {{- partial "header.html" . -}}
-  {{- block "main" . }}{{- end }}
-  {{- partial "footer.html" . -}}
-</body>
+    <!-- Include head partial -->
+    {{ partial "head.html" . }}
+  </head>
 
+  <body id="body">
+    <!-- Synchronize dark-mode class to the body element as soon as it opens -->
+    <script>
+      if (document.documentElement.classList.contains("dark-mode")) {
+        document.body.classList.add("dark-mode");
+      }
+    </script>
+
+    {{ partial "header.html" . }}
+
+    <main>
+      {{ block "main" . }}{{ end }}
+    </main>
+
+    {{ partial "footer.html" . }}
+  </body>
 </html>

@@ -1,20 +1,21 @@
 /* ==========================================================================
-   Configuración General y Transición
+   General Configuration & Transitions
    ========================================================================== */
 body {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 /* ==========================================================================
-   Modo Oscuro Base
+   Base Dark Mode
    ========================================================================== */
+html.dark-mode,
 body.dark-mode {
   background-color: #121212 !important;
   color: #e0e0e0 !important;
 }
 
 /* ==========================================================================
-   Menú de Navegación Superior (Navbar)
+   Top Navigation Menu (Navbar)
    ========================================================================== */
 body.dark-mode .navigation,
 body.dark-mode .navbar,
@@ -43,7 +44,7 @@ body.dark-mode .navbar-nav .active > .nav-link {
 }
 
 /* ==========================================================================
-   Banners de Páginas Secundarias (Contact, Publications, Projects, etc.)
+   Secondary Page Banners (Contact, Publications, Projects, etc.)
    ========================================================================== */
 body.dark-mode .global-page-header,
 body.dark-mode section.global-page-header,
@@ -55,15 +56,15 @@ body.dark-mode section[class*="banner"] {
 }
 
 /* ==========================================================================
-   Banner Principal del Home (#hero-area)
+   Main Homepage Banner (#hero-area)
    ========================================================================== */
-/* Solución para anular el background-image inline de #hero-area */
+/* Fix to override inline background-image on #hero-area */
 body.dark-mode #hero-area {
   position: relative !important;
   background-color: #121212 !important;
 }
 
-/* Capa de oscurecimiento exclusiva sobre la imagen de banner2.jpg */
+/* Darkening overlay directly over the banner image */
 body.dark-mode #hero-area::before {
   content: "" !important;
   position: absolute !important;
@@ -75,7 +76,7 @@ body.dark-mode #hero-area::before {
   z-index: 1 !important;
 }
 
-/* Elevar textos y cajas internas por encima de la capa oscura */
+/* Elevate text and internal boxes above the dark overlay */
 body.dark-mode #hero-area * {
   position: relative !important;
   z-index: 2 !important;
@@ -89,7 +90,7 @@ body.dark-mode #hero-area .block {
 }
 
 /* ==========================================================================
-   Estructuras Contenedoras Principales
+   Main Layout Containers
    ========================================================================== */
 body.dark-mode #global-header,
 body.dark-mode #footer,
@@ -102,7 +103,7 @@ body.dark-mode .bg-gray {
 }
 
 /* ==========================================================================
-   Tarjetas, Bloques y Cajas Generales
+   Cards, Blocks & General Containers
    ========================================================================== */
 body.dark-mode div:not(#hero-area *),
 body.dark-mode article,
@@ -120,7 +121,7 @@ body.dark-mode .portfolio-item {
 }
 
 /* ==========================================================================
-   Elementos Nativos (<details> y <summary> - Home y Proyectos)
+   Native HTML Elements (<details> and <summary> - Home & Projects)
    ========================================================================== */
 body.dark-mode details,
 body.dark-mode summary {
@@ -146,7 +147,7 @@ body.dark-mode .project-years {
 }
 
 /* ==========================================================================
-   Botones e Interacciones Moradas (Identidad Unificada)
+   Buttons & Purple Interactions (Unified Brand Identity)
    ========================================================================== */
 body.dark-mode .btn,
 body.dark-mode .btn-main,
@@ -171,7 +172,7 @@ body.dark-mode button:not(#theme-toggle):hover {
   box-shadow: 0 0 10px rgba(168, 45, 139, 0.5) !important;
 }
 
-/* Enlaces globales */
+/* Global Links */
 body.dark-mode a {
   color: #c438a3 !important;
 }
@@ -181,7 +182,7 @@ body.dark-mode a:hover {
 }
 
 /* ==========================================================================
-   Cápsulas, Badges y Etiquetas (H2020, PRIN 2022, etc.)
+   Pills, Badges & Tags (H2020, PRIN 2022, etc.)
    ========================================================================== */
 body.dark-mode .badge,
 body.dark-mode .badge-pill,
@@ -198,7 +199,7 @@ body.dark-mode .project-badge * {
 }
 
 /* ==========================================================================
-   Tipografía Global
+   Global Typography
    ========================================================================== */
 body.dark-mode h1, 
 body.dark-mode h2, 
@@ -215,7 +216,7 @@ body.dark-mode div.address-block * {
 }
 
 /* ==========================================================================
-   Iconos y Flechas
+   Icons & Arrows
    ========================================================================== */
 body.dark-mode i,
 body.dark-mode svg,

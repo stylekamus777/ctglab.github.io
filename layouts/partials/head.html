@@ -12,25 +12,24 @@
   <title>{{ .Title }}</title>
   <link rel="icon" href="{{ `images/favicon.ico` | absURL }}">
 
-  {{ "<!-- Twitter Bootstrs CSS -->" | safeHTML }}
+  {{ "<!-- Twitter Bootstrap CSS -->" | safeHTML }}
   <link rel="stylesheet" href="{{ `plugins/bootstrap/bootstrap.min.css` | absURL }}">
-  {{ "<!-- Ionicons Fonts Css -->" | safeHTML }}
+  {{ "<!-- Ionicons Fonts CSS -->" | safeHTML }}
   <link rel="stylesheet" href="{{ `plugins/ionicons/ionicons.min.css` | absURL }}">
-  {{ "<!-- animate css -->" | safeHTML }}
+  {{ "<!-- Animate CSS -->" | safeHTML }}
   <link rel="stylesheet" href="{{ `plugins/animate-css/animate.css` | absURL }}">
-  {{ "<!-- slick slider -->" | safeHTML }}
+  {{ "<!-- Slick Slider -->" | safeHTML }}
   <link rel="stylesheet" href="{{ `plugins/slick/slick.css` | absURL }}">
   {{ "<!-- Fancybox -->" | safeHTML }}
   <link rel="stylesheet" href="{{ `plugins/facncybox/jquery.fancybox.css` | absURL }}">
-  {{ "<!-- hover -->" | safeHTML }}
+  {{ "<!-- Hover -->" | safeHTML }}
   <link rel="stylesheet" href="{{ `plugins/hover/hover-min.css` | absURL }}">
-  {{ "<!-- template main css file -->" | safeHTML }}
+  {{ "<!-- Template Main CSS File -->" | safeHTML }}
   {{ $styles := resources.Get "css/style.css" | minify}}
   <link rel="stylesheet" href="{{ $styles.Permalink }}" media="screen">
   
-	{{"<!-- Custom stylesheet - for your changes -->" |safeHTML}}
-	{{ $custom := resources.Get "css/custom.css" | minify }}
+  {{ "<!-- Custom Stylesheet - For Your Changes -->" | safeHTML }}
+  {{ $custom := resources.Get "css/custom.css" | minify }}
   <link rel="stylesheet" href="{{ $custom.Permalink }}" media="screen">
   <link rel="stylesheet" href="/css/custom.css">
-  
 </head>
