@@ -1,13 +1,14 @@
 /* ==========================================================================
-   General Configuration & Transitions
+   1. Configuración General y Transiciones
    ========================================================================== */
 body {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 /* ==========================================================================
-   Base Dark Mode
+   2. Modo Oscuro Base
    ========================================================================== */
+:root.dark-mode,
 html.dark-mode,
 body.dark-mode {
   background-color: #121212 !important;
@@ -15,15 +16,39 @@ body.dark-mode {
 }
 
 /* ==========================================================================
-   Top Navigation Menu (Navbar)
+   3. Cabecera y Barra de Navegación (Franja Horizontal Unificada #1e1e1e)
    ========================================================================== */
-body.dark-mode .navigation,
-body.dark-mode .navbar,
-body.dark-mode header.navigation {
-  background-color: #1a1a1a !important;
-  border-bottom: 1px solid #2d2d2d !important;
+body.dark-mode .top-bar,
+body.dark-mode .animated-header,
+body.dark-mode header,
+body.dark-mode header.navigation,
+body.dark-mode section.top-bar,
+body.dark-mode #global-header {
+  background-color: #1e1e1e !important;
+  border-bottom: 1px solid #333333 !important;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4) !important;
 }
 
+/* Transparencia total en elementos internos de la cabecera */
+body.dark-mode .top-bar *,
+body.dark-mode .animated-header *,
+body.dark-mode header *,
+body.dark-mode .navigation,
+body.dark-mode .navbar,
+body.dark-mode .navbar-light,
+body.dark-mode .bg-light,
+body.dark-mode .navigation .container {
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+
+/* Menú desplegable cuando está abierto */
+body.dark-mode .dropdown-menu {
+  background-color: #1e1e1e !important;
+  border: 1px solid #333333 !important;
+}
+
+/* Enlaces del menú de navegación */
 body.dark-mode .navigation .navbar-nav .nav-link,
 body.dark-mode .navbar-nav .nav-link,
 body.dark-mode .navigation a {
@@ -44,27 +69,56 @@ body.dark-mode .navbar-nav .active > .nav-link {
 }
 
 /* ==========================================================================
-   Secondary Page Banners (Contact, Publications, Projects, etc.)
+   4. Banners Secundarios de Páginas (News, Contact, Publications, etc.)
    ========================================================================== */
 body.dark-mode .global-page-header,
 body.dark-mode section.global-page-header,
 body.dark-mode .page-header,
-body.dark-mode section[class*="page-header"],
-body.dark-mode section[class*="banner"] {
-  background-color: #1a1a1a !important;
-  background-image: none !important;
+body.dark-mode section[class*="page-header"] {
+  background: transparent !important;
+  background-color: transparent !important;
+  box-shadow: none !important;
+  border: none !important;
+  text-align: center !important;
+}
+
+body.dark-mode .global-page-header .container,
+body.dark-mode .global-page-header .row,
+body.dark-mode .global-page-header .col-md-12,
+body.dark-mode .page-header .container {
+  background: transparent !important;
+  background-color: transparent !important;
+  box-shadow: none !important;
+  border: none !important;
+  text-align: center !important;
+}
+
+/* Recuadro flotante de título centrado */
+body.dark-mode .global-page-header .block,
+body.dark-mode .page-header .block {
+  background-color: #1e1e1e !important;
+  border: 1px solid #333333 !important;
+  border-radius: 12px !important;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5) !important;
+  display: inline-block !important;
+  margin: 0 auto !important;
+  padding: 15px 45px !important;
+}
+
+body.dark-mode .global-page-header .block *,
+body.dark-mode .page-header .block * {
+  background: transparent !important;
+  color: #ffffff !important;
 }
 
 /* ==========================================================================
-   Main Homepage Banner (#hero-area)
+   5. Banner Principal de Inicio (#hero-area)
    ========================================================================== */
-/* Fix to override inline background-image on #hero-area */
 body.dark-mode #hero-area {
   position: relative !important;
   background-color: #121212 !important;
 }
 
-/* Darkening overlay directly over the banner image */
 body.dark-mode #hero-area::before {
   content: "" !important;
   position: absolute !important;
@@ -76,7 +130,6 @@ body.dark-mode #hero-area::before {
   z-index: 1 !important;
 }
 
-/* Elevate text and internal boxes above the dark overlay */
 body.dark-mode #hero-area * {
   position: relative !important;
   z-index: 2 !important;
@@ -90,38 +143,97 @@ body.dark-mode #hero-area .block {
 }
 
 /* ==========================================================================
-   Main Layout Containers
+   6. Contenedores del Cuerpo Principal
    ========================================================================== */
-body.dark-mode #global-header,
 body.dark-mode #footer,
 body.dark-mode footer,
-body.dark-mode section:not(#hero-area),
+body.dark-mode section:not(.top-bar),
+body.dark-mode #blog-full-width,
 body.dark-mode .page-wrapper,
-body.dark-mode .bg-light,
+body.dark-mode .bg-light:not(.navbar-light),
 body.dark-mode .bg-gray {
   background-color: #121212 !important;
 }
 
-/* ==========================================================================
-   Cards, Blocks & General Containers
-   ========================================================================== */
-body.dark-mode div:not(#hero-area *),
+body.dark-mode .container,
+body.dark-mode .row,
+body.dark-mode .col,
+body.dark-mode [class*="col-"],
 body.dark-mode article,
-body.dark-mode header,
-body.dark-mode footer,
-body.dark-mode .address-block,
-body.dark-mode .publication-item,
-body.dark-mode .block,
-body.dark-mode .card,
-body.dark-mode .contact-box,
-body.dark-mode .service-item,
-body.dark-mode .portfolio-item {
-  background-color: #1e1e1e !important;
-  border-color: #333333 !important;
+body.dark-mode .blog-content {
+  background-color: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
 }
 
 /* ==========================================================================
-   Native HTML Elements (<details> and <summary> - Home & Projects)
+   7. Sección de Contacto y Tarjetas de Dirección
+   ========================================================================== */
+body.dark-mode #contact-section,
+body.dark-mode .address-details {
+  background: transparent !important;
+  background-color: transparent !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+
+/* Tarjetas individuales idénticas */
+body.dark-mode .address-details .address,
+body.dark-mode .address-details .email,
+body.dark-mode .address-details .phone {
+  background-color: #1e1e1e !important;
+  border: 1px solid #333333 !important;
+  border-radius: 12px !important;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4) !important;
+  padding: 25px 15px !important;
+  text-align: center !important;
+  min-height: 180px !important;
+}
+
+body.dark-mode .address-details .address *,
+body.dark-mode .address-details .email *,
+body.dark-mode .address-details .phone *,
+body.dark-mode .address-details h5,
+body.dark-mode .address-details p {
+  color: #e0e0e0 !important;
+  background: transparent !important;
+}
+
+/* Íconos morados de contacto */
+body.dark-mode .address-details i {
+  filter: none !important;
+}
+
+body.dark-mode .address-details .address i,
+body.dark-mode .address-details .email i,
+body.dark-mode .address-details .phone i {
+  background-color: #2d1b2e !important;
+  color: #e052bf !important;
+  border-radius: 12px !important;
+  width: 50px !important;
+  height: 50px !important;
+  line-height: 50px !important;
+  font-size: 24px !important;
+  text-align: center !important;
+  display: inline-block !important;
+  margin-bottom: 15px !important;
+}
+
+/* ==========================================================================
+   8. Tarjetas Generales y Publicaciones
+   ========================================================================== */
+body.dark-mode .service-item,
+body.dark-mode .card,
+body.dark-mode .publication-item,
+body.dark-mode .portfolio-item {
+  background-color: #1e1e1e !important;
+  border: 1px solid #333333 !important;
+  border-radius: 12px !important;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* ==========================================================================
+   9. Elementos HTML Nativos (<details> y <summary>)
    ========================================================================== */
 body.dark-mode details,
 body.dark-mode summary {
@@ -147,7 +259,7 @@ body.dark-mode .project-years {
 }
 
 /* ==========================================================================
-   Buttons & Purple Interactions (Unified Brand Identity)
+   10. Botones e Interacciones
    ========================================================================== */
 body.dark-mode .btn,
 body.dark-mode .btn-main,
@@ -172,7 +284,7 @@ body.dark-mode button:not(#theme-toggle):hover {
   box-shadow: 0 0 10px rgba(168, 45, 139, 0.5) !important;
 }
 
-/* Global Links */
+/* Enlaces globales */
 body.dark-mode a {
   color: #c438a3 !important;
 }
@@ -182,7 +294,7 @@ body.dark-mode a:hover {
 }
 
 /* ==========================================================================
-   Pills, Badges & Tags (H2020, PRIN 2022, etc.)
+   11. Badges, Pills y Etiquetas
    ========================================================================== */
 body.dark-mode .badge,
 body.dark-mode .badge-pill,
@@ -199,7 +311,7 @@ body.dark-mode .project-badge * {
 }
 
 /* ==========================================================================
-   Global Typography
+   12. Tipografía Global
    ========================================================================== */
 body.dark-mode h1, 
 body.dark-mode h2, 
@@ -210,16 +322,71 @@ body.dark-mode h6,
 body.dark-mode p,
 body.dark-mode li,
 body.dark-mode span,
-body.dark-mode strong,
-body.dark-mode div.address-block * {
+body.dark-mode strong {
   color: #e0e0e0 !important;
 }
 
 /* ==========================================================================
-   Icons & Arrows
+   13. Botonera Minimalista de Modo Oscuro (Tailwind Style)
    ========================================================================== */
-body.dark-mode i,
-body.dark-mode svg,
-body.dark-mode .project-chevron {
-  filter: invert(1) !important;
+.theme-switcher-pill {
+  display: inline-flex;
+  align-items: center;
+  background-color: #f1f5f9;
+  border: 1px solid #e2e8f0;
+  border-radius: 9999px;
+  padding: 3px;
+  gap: 2px;
+}
+
+body.dark-mode .theme-switcher-pill {
+  background-color: #1e1e1e;
+  border-color: #333333;
+}
+
+.theme-btn {
+  background: transparent !important;
+  border: none !important;
+  outline: none !important;
+  border-radius: 9999px !important;
+  width: 28px !important;
+  height: 28px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  color: #64748b !important;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  padding: 0 !important;
+  box-shadow: none !important;
+}
+
+.theme-btn:hover {
+  color: #0f172a !important;
+}
+
+body.dark-mode .theme-btn {
+  color: #94a3b8 !important;
+}
+
+body.dark-mode .theme-btn:hover {
+  color: #ffffff !important;
+}
+
+/* Opción Seleccionada (Active) */
+.theme-btn.active {
+  background-color: #ffffff !important;
+  color: #0f172a !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) !important;
+}
+
+body.dark-mode .theme-btn.active {
+  background-color: #2a2a2a !important;
+  color: #ffffff !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4) !important;
+}
+
+.theme-btn svg {
+  stroke: currentColor;
+  filter: none !important;
 }

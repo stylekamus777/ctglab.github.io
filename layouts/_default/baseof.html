@@ -1,11 +1,9 @@
 <!DOCTYPE html>
 <html lang="{{ .Site.LanguageCode | default "en" }}">
   <head>
-    <!-- ANTI-FLICKER CRITICAL SCRIPT & CSS -->
-    <!-- Informs the browser engine that this page supports a native dark canvas -->
     <meta name="color-scheme" content="light dark">
     <style>
-      /* Force dark background instantly to prevent white browser canvas rendering during page transitions */
+      :root.dark-mode,
       html.dark-mode,
       html.dark-mode body {
         background-color: #121212 !important;
@@ -14,19 +12,21 @@
     </style>
     <script>
       (function() {
-        // Read stored preference from local storage and apply class before body renders
-        if (localStorage.getItem("theme") === "dark") {
+        var savedTheme = localStorage.getItem("theme");
+        var prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+        if (savedTheme === "dark" || (!savedTheme && prefersDark)) {
           document.documentElement.classList.add("dark-mode");
+        } else if (savedTheme === "light") {
+          document.documentElement.classList.remove("dark-mode");
         }
       })();
     </script>
 
-    <!-- Include head partial -->
     {{ partial "head.html" . }}
   </head>
 
   <body id="body">
-    <!-- Synchronize dark-mode class to the body element as soon as it opens -->
     <script>
       if (document.documentElement.classList.contains("dark-mode")) {
         document.body.classList.add("dark-mode");
