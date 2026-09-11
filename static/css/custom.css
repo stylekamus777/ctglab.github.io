@@ -6,7 +6,7 @@ body {
 }
 
 /* ==========================================================================
-   2. Modo Oscuro Base
+   2. Modo Oscuro Base (Aplica instantáneamente a la raíz del documento)
    ========================================================================== */
 :root.dark-mode,
 html.dark-mode,
@@ -167,7 +167,20 @@ body.dark-mode .blog-content {
 }
 
 /* ==========================================================================
-   7. Sección de Contacto y Tarjetas de Dirección
+   7. Google Maps en Modo Oscuro (Inversión de tonos para iframe)
+   ========================================================================== */
+body.dark-mode iframe,
+body.dark-mode .map-holder iframe,
+body.dark-mode #map iframe,
+body.dark-mode .google-map iframe {
+  filter: invert(90%) hue-rotate(180deg) contrast(100%) saturate(85%) !important;
+  border-radius: 12px !important;
+  border: 1px solid #333333 !important;
+  transition: filter 0.3s ease;
+}
+
+/* ==========================================================================
+   8. Sección de Contacto y Tarjetas de Dirección
    ========================================================================== */
 body.dark-mode #contact-section,
 body.dark-mode .address-details {
@@ -177,7 +190,6 @@ body.dark-mode .address-details {
   border: none !important;
 }
 
-/* Tarjetas individuales idénticas */
 body.dark-mode .address-details .address,
 body.dark-mode .address-details .email,
 body.dark-mode .address-details .phone {
@@ -199,7 +211,6 @@ body.dark-mode .address-details p {
   background: transparent !important;
 }
 
-/* Íconos morados de contacto */
 body.dark-mode .address-details i {
   filter: none !important;
 }
@@ -220,7 +231,7 @@ body.dark-mode .address-details .phone i {
 }
 
 /* ==========================================================================
-   8. Tarjetas Generales y Publicaciones
+   9. Tarjetas Generales y Publicaciones
    ========================================================================== */
 body.dark-mode .service-item,
 body.dark-mode .card,
@@ -233,7 +244,7 @@ body.dark-mode .portfolio-item {
 }
 
 /* ==========================================================================
-   9. Elementos HTML Nativos (<details> y <summary>)
+   10. Elementos HTML Nativos (<details> y <summary>)
    ========================================================================== */
 body.dark-mode details,
 body.dark-mode summary {
@@ -259,7 +270,7 @@ body.dark-mode .project-years {
 }
 
 /* ==========================================================================
-   10. Botones e Interacciones
+   11. Botones e Interacciones
    ========================================================================== */
 body.dark-mode .btn,
 body.dark-mode .btn-main,
@@ -284,7 +295,6 @@ body.dark-mode button:not(#theme-toggle):hover {
   box-shadow: 0 0 10px rgba(168, 45, 139, 0.5) !important;
 }
 
-/* Enlaces globales */
 body.dark-mode a {
   color: #c438a3 !important;
 }
@@ -294,7 +304,7 @@ body.dark-mode a:hover {
 }
 
 /* ==========================================================================
-   11. Badges, Pills y Etiquetas
+   12. Badges, Pills y Etiquetas
    ========================================================================== */
 body.dark-mode .badge,
 body.dark-mode .badge-pill,
@@ -311,7 +321,7 @@ body.dark-mode .project-badge * {
 }
 
 /* ==========================================================================
-   12. Tipografía Global
+   13. Tipografía Global
    ========================================================================== */
 body.dark-mode h1, 
 body.dark-mode h2, 
@@ -327,7 +337,7 @@ body.dark-mode strong {
 }
 
 /* ==========================================================================
-   13. Botonera Minimalista de Modo Oscuro (Tailwind Style)
+   14. Botonera Minimalista de Modo Oscuro (Tailwind Style)
    ========================================================================== */
 .theme-switcher-pill {
   display: inline-flex;
@@ -373,7 +383,6 @@ body.dark-mode .theme-btn:hover {
   color: #ffffff !important;
 }
 
-/* Opción Seleccionada (Active) */
 .theme-btn.active {
   background-color: #ffffff !important;
   color: #0f172a !important;
