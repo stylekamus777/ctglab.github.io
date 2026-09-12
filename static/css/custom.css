@@ -1,12 +1,12 @@
 /* ==========================================================================
-   1. Configuración General y Transiciones
+   1. General config & transitions
    ========================================================================== */
 body {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 /* ==========================================================================
-   2. Modo Oscuro Base (Aplica instantáneamente a la raíz del documento)
+   2. Base Dark Mode
    ========================================================================== */
 :root.dark-mode,
 html.dark-mode,
@@ -16,7 +16,7 @@ body.dark-mode {
 }
 
 /* ==========================================================================
-   3. Cabecera y Barra de Navegación (Franja Horizontal Unificada #1e1e1e)
+   3. Header & Nav Bar
    ========================================================================== */
 body.dark-mode .top-bar,
 body.dark-mode .animated-header,
@@ -69,7 +69,7 @@ body.dark-mode .navbar-nav .active > .nav-link {
 }
 
 /* ==========================================================================
-   4. Banners Secundarios de Páginas (News, Contact, Publications, etc.)
+   4. Secondary pages bars (News, Contact, Publications, etc.)
    ========================================================================== */
 body.dark-mode .global-page-header,
 body.dark-mode section.global-page-header,
@@ -112,7 +112,7 @@ body.dark-mode .page-header .block * {
 }
 
 /* ==========================================================================
-   5. Banner Principal de Inicio (#hero-area)
+   5. Home Banner (#hero-area)
    ========================================================================== */
 body.dark-mode #hero-area {
   position: relative !important;
@@ -143,7 +143,7 @@ body.dark-mode #hero-area .block {
 }
 
 /* ==========================================================================
-   6. Contenedores del Cuerpo Principal
+   6. Body containers
    ========================================================================== */
 body.dark-mode #footer,
 body.dark-mode footer,
@@ -167,7 +167,7 @@ body.dark-mode .blog-content {
 }
 
 /* ==========================================================================
-   7. Google Maps en Modo Oscuro (Inversión de tonos para iframe)
+   7. Dark Mode google maps (iframe invertion colours)
    ========================================================================== */
 body.dark-mode iframe,
 body.dark-mode .map-holder iframe,
@@ -180,7 +180,7 @@ body.dark-mode .google-map iframe {
 }
 
 /* ==========================================================================
-   8. Sección de Contacto y Tarjetas de Dirección
+   8. Contats & Address cards
    ========================================================================== */
 body.dark-mode #contact-section,
 body.dark-mode .address-details {
@@ -231,7 +231,7 @@ body.dark-mode .address-details .phone i {
 }
 
 /* ==========================================================================
-   9. Tarjetas Generales y Publicaciones
+   9. Publications and general cards
    ========================================================================== */
 body.dark-mode .service-item,
 body.dark-mode .card,
@@ -244,7 +244,7 @@ body.dark-mode .portfolio-item {
 }
 
 /* ==========================================================================
-   10. Elementos HTML Nativos (<details> y <summary>)
+   10. Native HTML elements (<details> y <summary>)
    ========================================================================== */
 body.dark-mode details,
 body.dark-mode summary {
@@ -270,7 +270,7 @@ body.dark-mode .project-years {
 }
 
 /* ==========================================================================
-   11. Botones e Interacciones
+   11. Btn & interactions
    ========================================================================== */
 body.dark-mode .btn,
 body.dark-mode .btn-main,
@@ -304,7 +304,7 @@ body.dark-mode a:hover {
 }
 
 /* ==========================================================================
-   12. Badges, Pills y Etiquetas
+   12. Badges, Pills y Labels
    ========================================================================== */
 body.dark-mode .badge,
 body.dark-mode .badge-pill,
@@ -321,7 +321,7 @@ body.dark-mode .project-badge * {
 }
 
 /* ==========================================================================
-   13. Tipografía Global
+   13. Global tipography
    ========================================================================== */
 body.dark-mode h1, 
 body.dark-mode h2, 
@@ -337,7 +337,7 @@ body.dark-mode strong {
 }
 
 /* ==========================================================================
-   14. Botonera Minimalista de Modo Oscuro (Tailwind Style)
+   14. Dark Mode minimalist switcher (Tailwind Style)
    ========================================================================== */
 .theme-switcher-pill {
   display: inline-flex;
