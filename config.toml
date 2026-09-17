@@ -1,5 +1,5 @@
 baseURL = "https://ctglab.github.io/"
-languageCode = "en-us"
+locale = "en-us"
 title = "CTGLab - Computational Genomics Lab"
 theme = "timer-hugo"
 
@@ -38,12 +38,12 @@ weight  = 6
 # Site Params
 [params]
 home = "Home"
-logo = "images/resized_logo.png"
+logo = "images/resized_logo.webp"
 
 # Banner Section
 [params.banner]
 enable  = true
-bgImage = "images/banner2.jpg"
+bgImage = "images/banner2.webp"
 heading = "CTGLab"
 description = "Computational and Translational Genomics Laboratory"
 # button
@@ -57,6 +57,6 @@ btnURL  = "https://themefisher.com/"
 enable  = true
 title   = "Our lab"
 content = "CTGLab develops innovative computational solutions and analytical frameworks to transform multi-omics and clinical data into actionable insights for Precision Medicine. Our multidisciplinary approach integrates mathematics, statistics, machine learning, and computer science to decode the complexity of cancer biology and advance personalized therapeutic strategies"
-image   = "images/about/test.jpg"
+image   = "images/about/test.webp"
 
 

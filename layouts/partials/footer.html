@@ -1,7 +1,8 @@
 {{ "<!-- Footer Section Start -->" | safeHTML }}
 <footer id="footer">
   <div class="container">
-    <div class="row content-justify-between">
+    <div class="row align-items-center">
+      <!-- Mensaje de Copyright -->
       <div class="col-md-8 col-12 text-center text-lg-left text-md-left">
         <p class="copyright">Copyright:
           <span>
@@ -14,25 +15,57 @@
           <a href="https://themefisher.com/free-bootstrap-templates/" target="_blank">Store</a>
         </p>
       </div>
+
+      <!-- Botonera Minimalista (Sistema / Claro / Oscuro) -->
+      <div class="col-md-4 col-12 text-center text-lg-right text-md-right mt-3 mt-md-0">
+        <div class="theme-switcher-pill" id="theme-switcher">
+          <button type="button" class="theme-btn" data-theme="system" title="Tema del Sistema">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+              <line x1="8" y1="21" x2="16" y2="21"></line>
+              <line x1="12" y1="17" x2="12" y2="21"></line>
+            </svg>
+          </button>
+          <button type="button" class="theme-btn" data-theme="light" title="Modo Claro">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="5"></circle>
+              <line x1="12" y1="1" x2="12" y2="3"></line>
+              <line x1="12" y1="21" x2="12" y2="23"></line>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+              <line x1="1" y1="12" x2="3" y2="12"></line>
+              <line x1="21" y1="12" x2="23" y2="12"></line>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
+          </button>
+          <button type="button" class="theme-btn" data-theme="dark" title="Modo Oscuro">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
     </div>
   </div>
 </footer>
-{{ "<!-- footer section end -->" | safeHTML }}
+{{ "<!-- Footer Section End -->" | safeHTML }}
 
-{{ "<!-- jquery -->" | safeHTML }}
+{{ "<!-- jQuery -->" | safeHTML }}
 <script src="{{ `plugins/jQurey/jquery.min.js` | absURL }}"></script>
-{{ "<!-- slick slider -->" | safeHTML }}
+{{ "<!-- Slick Slider -->" | safeHTML }}
 <script src="{{ `plugins/slick/slick.min.js` | absURL }}"></script>
-{{ "<!-- bootstrap js -->" | safeHTML }}
+{{ "<!-- Bootstrap JS -->" | safeHTML }}
 <script src="{{ `plugins/bootstrap/bootstrap.min.js` | absURL }}"></script>
-{{ "<!-- wow js -->" | safeHTML }}
+{{ "<!-- WOW JS -->" | safeHTML }}
 <script src="{{ `plugins/wow-js/wow.min.js` | absURL }}"></script>
 {{ "<!-- Fancybox -->" | safeHTML }}
 <script src="{{ `plugins/facncybox/jquery.fancybox.js` | absURL }}"></script>
-{{ "<!-- template main js -->" | safeHTML }}
+{{ "<!-- Template Main JS -->" | safeHTML }}
 {{ $script := resources.Get "js/script.js" | minify}}
 <script src="{{ $script.Permalink }}"></script>
-{{ "<!-- google analitycs -->" | safeHTML }}
+
+{{ "<!-- Google Analytics -->" | safeHTML }}
 <script>
   (function (i, s, o, g, r, a, m) {
     i['GoogleAnalyticsObject'] = r;
@@ -47,4 +80,80 @@
   })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
   ga('create', '{{ .Site.Params.googleAnalitycsID }}', 'auto');
   ga('send', 'pageview');
+</script>
+
+<!-- Dark Mode Toggle Script (Tailwind Style) -->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const buttons = document.querySelectorAll(".theme-btn");
+    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)");
+
+    function setTheme(theme) {
+      if (theme === "system") {
+        localStorage.removeItem("theme");
+        if (prefersDark.matches) {
+          document.documentElement.classList.add("dark-mode");
+          document.body.classList.add("dark-mode");
+        } else {
+          document.documentElement.classList.remove("dark-mode");
+          document.body.classList.remove("dark-mode");
+        }
+      } else if (theme === "dark") {
+        localStorage.setItem("theme", "dark");
+        document.documentElement.classList.add("dark-mode");
+        document.body.classList.add("dark-mode");
+      } else {
+        localStorage.setItem("theme", "light");
+        document.documentElement.classList.remove("dark-mode");
+        document.body.classList.remove("dark-mode");
+      }
+
+      buttons.forEach(function (btn) {
+        btn.classList.toggle("active", btn.getAttribute("data-theme") === theme);
+      });
+    }
+
+    const savedTheme = localStorage.getItem("theme") || "system";
+    setTheme(savedTheme);
+
+    buttons.forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        setTheme(this.getAttribute("data-theme"));
+      });
+    });
+
+    prefersDark.addEventListener("change", function (e) {
+      if (!localStorage.getItem("theme")) {
+        setTheme("system");
+      }
+    });
+  });
+</script>
+<!-- Botón Volver Arriba -->
+<button id="back-to-top" class="back-to-top" aria-label="Volver arriba">
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M18 15l-6-6-6 6"/>
+  </svg>
+</button>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const backToTopBtn = document.getElementById('back-to-top');
+    if (!backToTopBtn) return;
+
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 200) {
+        backToTopBtn.classList.add('show');
+      } else {
+        backToTopBtn.classList.remove('show');
+      }
+    });
+
+    backToTopBtn.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+  });
 </script>

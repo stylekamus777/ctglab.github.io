@@ -3,13 +3,13 @@ title: "Identification of actionable cancer neoepitopes using just tumor RNAseq"
 description : "This is meta description"
 type: post
 date: 2022-08-19T12:29:40+06:00
-image: images/blog/eneo.jpeg
+image: images/blog/eneo.webp
 Tags: ["Transcriptomics", "Cancer", "Immunotherapy"]
 collaborations:
-    - image: images/blog/loghi_coll/iit.png
-    - image: images/blog/loghi_coll/ifc.png
-    - image: images/blog/loghi_coll/trento.png
-    - image: images/blog/loghi_coll/ispro.png
+    - image: images/blog/loghi_coll/iit.webp
+    - image: images/blog/loghi_coll/ifc.webp
+    - image: images/blog/loghi_coll/trento.webp
+    - image: images/blog/loghi_coll/ispro.webp
 
 author: Danilo Tatoni
 ---

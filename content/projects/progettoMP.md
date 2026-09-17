@@ -3,13 +3,13 @@ title: "In silico investigation of BRAFV600E regulatory networks in melanoma"
 description : "This is meta description"
 type: post
 date: 2022-08-19T12:29:40+06:00
-image: images/blog/graphical_abstract_BRAF_MP.png
+image: images/blog/graphical_abstract_BRAF_MP.webp
 author: Maurizio Podda
 collaborations:
-    - image: images/blog/loghi_coll/iit.png
-    - image: images/blog/loghi_coll/ifc.png
-    - image: images/blog/loghi_coll/ispro.png
-    - image: images/blog/loghi_coll/siena.png
+    - image: images/blog/loghi_coll/iit.webp
+    - image: images/blog/loghi_coll/ifc.webp
+    - image: images/blog/loghi_coll/ispro.webp
+    - image: images/blog/loghi_coll/siena.webp
     
     
 ---

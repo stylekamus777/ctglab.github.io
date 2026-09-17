@@ -3,15 +3,15 @@ title: "Enhancing copy number variants (CNVs) detection from sequencing"
 description : "This is meta description"
 type: post
 date: 2022-08-20T12:29:40+06:00
-image: images/blog/exca2.png
+image: images/blog/exca2.webp
 author: Romina D'Aurizio, Elia Ceroni
 Tags: ["CNV", "WES", "Gene Panel", "Targeted Sequencing", "Structural Variant"]
 collaborations:
-    - image: images/blog/loghi_coll/iit.png
-    - image: images/blog/loghi_coll/Policlinico Sant'Orsola_UniBo.png
-    - image: images/blog/loghi_coll/toscana.png
-    - image: images/blog/loghi_coll/unifi.png
-    - image: images/blog/loghi_coll/siena.png
+    - image: images/blog/loghi_coll/iit.webp
+    - image: images/blog/loghi_coll/Policlinico Sant'Orsola_UniBo.webp
+    - image: images/blog/loghi_coll/toscana.webp
+    - image: images/blog/loghi_coll/unifi.webp
+    - image: images/blog/loghi_coll/siena.webp
     
 ---
 

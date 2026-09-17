@@ -3,13 +3,13 @@ title: "Modeling 3-Dimensional chromatin interactions rearrangments in Neurodeve
 description : "This is meta description"
 type: post
 date: 2022-08-19T12:29:40+06:00
-image: images/blog/PEint.png
-attachments: images/blog/Test.png
+image: images/blog/PEint.webp
+attachments: images/blog/Test.webp
 author: Orazio Catona
 collaborations:
-    - image: images/blog/loghi_coll/iit.png
-    - image: images/blog/loghi_coll/milano_bicocca.png
-    - image: images/blog/loghi_coll/siena.png
+    - image: images/blog/loghi_coll/iit.webp
+    - image: images/blog/loghi_coll/milano_bicocca.webp
+    - image: images/blog/loghi_coll/siena.webp
     
     
 ---

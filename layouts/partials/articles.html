@@ -1,4 +1,4 @@
-{{ $articles := getJSON "content/publications/DOI_list.json" }}
+{{ $articles := unmarshal (readFile "content/publications/DOI_list.json") }}
 {{ $sortedArticles := sort $articles "year" "desc" }}
 
 
