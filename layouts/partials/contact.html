@@ -44,8 +44,8 @@
           <i class="ion-ios-email-outline"></i>
           <h6 class="contact-card-title">Email Us</h6>
           <p class="contact-card-text">
-            {{ with .Site.Data.contact.mail1 }}<a href="mailto:{{ replace . `[at]` `@` }}">{{ . }}</a>{{ end }}
-            {{ with .Site.Data.contact.mail2 }}<br><a href="mailto:{{ replace . `[at]` `@` }}">{{ . }}</a>{{ end }}
+            {{ with .Site.Data.contact.mail1 }}<span>{{ . }}</span>{{ end }}
+            {{ with .Site.Data.contact.mail2 }}<br><span>{{ . }}</span>{{ end }}
           </p>
         </div>
       </div>
@@ -54,8 +54,8 @@
           <i class="ion-ios-telephone-outline"></i>
           <h6 class="contact-card-title">Call Us</h6>
           <p class="contact-card-text">
-            {{ with .Site.Data.contact.phone1 }}<a href="tel:{{ replace . ` ` `` }}">{{ . }}</a>{{ end }}
-            {{ with .Site.Data.contact.phone2 }}<br><a href="tel:{{ replace . ` ` `` }}">{{ . }}</a>{{ end }}
+            {{ with .Site.Data.contact.phone1 }}<span>{{ . }}</span>{{ end }}
+            {{ with .Site.Data.contact.phone2 }}<br><span>{{ . }}</span>{{ end }}
           </p>
         </div>
       </div>

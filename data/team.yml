@@ -10,22 +10,6 @@ members  :
     googleplus  : https://github.com
   
 
-  - name  : Elia Ceroni, PhD
-    image : images/team/elia.jpg
-    designation : IT engineer, Research Fellow
-    description : 
-    twitter     : https://www.twitter.com
-    linkedIn    : https://linkedin.com/in/elia-giuseppe-ceroni-9941aa15b
-    googleplus  : https://github.com/fhgre
-
-  - name  : Francesco Paparazzo, PhD
-    image : images/team/fra.jpg
-    designation : Biologist, Research Fellow
-    description : 
-    twitter     : https://www.twitter.com
-    linkedIn    : https://www.linkedin.com/in/francesco-paparazzo/
-    googleplus  : https://github.com/Francesco85P
-  
   - name  : Valeria Repetto
     image : images/team/valeria.png
     designation : Physicist, PhD Student
@@ -33,14 +17,6 @@ members  :
     twitter     : https://www.twitter.com
     linkedIn    : https://linkedin.com/in/valeria-repetto-1395a1176
     googleplus  : https://github.com
-
-  - name  : Danilo Tatoni
-    image : images/team/danilo.png
-    designation : Biotechnologist, PhD Student
-    description : 
-    twitter     : https://www.x.com/danilotat
-    linkedIn    : https://linkedin.com/in/danilo-tatoni-903b18a6
-    googleplus  : https://github.com/danilotat
 
   - name  : Tommaso Ducci 
     image : images/team/tommaso.png

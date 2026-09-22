@@ -1,10 +1,6 @@
 /* ==========================================================================
    0. Dark Mode Tokens
    ========================================================================== */
-:root {
-  --ctg-dur: 0.25s;
-}
-
 html.dark-mode {
   color-scheme: dark;
 
@@ -23,7 +19,6 @@ html.dark-mode {
   --ctg-text-2:        #a9a2b8;
   --ctg-text-3:        #756d86;
 
-  /* Brand */
   --ctg-brand:         #c32a8e;
   --ctg-brand-hover:   #d8399f;
   --ctg-brand-text:    #f07fc8;
@@ -43,21 +38,7 @@ html.dark-mode {
 }
 
 /* ==========================================================================
-   1. General Config & Transitions
-   ========================================================================== */
-body {
-  transition: background-color var(--ctg-dur) ease, color var(--ctg-dur) ease;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  body,
-  body.dark-mode * {
-    transition: none !important;
-  }
-}
-
-/* ==========================================================================
-   2. Base Dark Mode
+   1. Base Dark Mode
    ========================================================================== */
 :root.dark-mode,
 html.dark-mode,
@@ -283,9 +264,8 @@ body.dark-mode .address-details .phone {
   border: 1px solid var(--ctg-border) !important;
   border-radius: 12px !important;
   box-shadow: var(--ctg-shadow-1) !important;
-  padding: 25px 15px !important;
+  padding: 28px 20px !important;
   text-align: center !important;
-  min-height: 180px !important;
   transition: border-color 0.2s ease, background-color 0.2s ease;
 }
 
@@ -300,6 +280,7 @@ body.dark-mode .address-details .address *,
 body.dark-mode .address-details .email *,
 body.dark-mode .address-details .phone *,
 body.dark-mode .address-details h5,
+body.dark-mode .address-details h6,
 body.dark-mode .address-details p {
   color: var(--ctg-text-2) !important;
   background: transparent !important;
@@ -315,35 +296,51 @@ body.dark-mode .address-details .phone i {
   background-color: var(--ctg-brand-tint) !important;
   color: var(--ctg-brand-text) !important;
   border-radius: 50% !important;
-  width: 50px !important;
-  height: 50px !important;
-  line-height: 50px !important;
-  font-size: 22px !important;
+  width: 56px !important;
+  height: 56px !important;
+  line-height: 56px !important;
+  font-size: 32px !important;
   text-align: center !important;
   display: inline-block !important;
-  margin-bottom: 15px !important;
+  margin-bottom: 12px !important;
+}
+
+body.dark-mode .address-details h6,
+body.dark-mode .address-details p {
+  font-family: "Geosanslight", sans-serif !important;
+  font-size: 16px !important;
+  line-height: 1.5 !important;
+  font-weight: 500 !important;
+}
+
+body.dark-mode .address-details p,
+body.dark-mode .address-details p span,
+body.dark-mode .address-details p a {
+  font-family: "Roboto", sans-serif !important;
+  font-size: 14px !important;
+  line-height: 1.5 !important;
+  font-weight: 500 !important;
 }
 
 body.dark-mode .address-details .email p,
 body.dark-mode .address-details .email a,
+body.dark-mode .address-details .email span,
 body.dark-mode .address-details .phone p,
-body.dark-mode .address-details .phone a {
-  font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace !important;
-  font-size: 0.92em !important;
-  letter-spacing: 0.01em;
+body.dark-mode .address-details .phone a,
+body.dark-mode .address-details .phone span {
+  font-family: "Roboto", sans-serif !important;
+  font-size: 14px !important;
+  line-height: 1.5 !important;
+  font-weight: 500 !important;
+  letter-spacing: normal;
   word-break: break-word;
   text-decoration: none !important;
 }
 
 body.dark-mode .address-details .email a,
 body.dark-mode .address-details .phone a {
-  color: var(--ctg-data) !important;
+  color: var(--ctg-text-2) !important;
   text-decoration: none !important;
-}
-
-body.dark-mode .address-details .email a:hover,
-body.dark-mode .address-details .phone a:hover {
-  text-decoration: underline !important;
 }
 
 /* ==========================================================================
@@ -504,13 +501,6 @@ body.dark-mode .team-member .social-icon {
   fill: currentColor !important;
   width: 18px !important;
   height: 18px !important;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .team-member.wow {
-    animation: none !important;
-    visibility: visible !important;
-  }
 }
 
 body.dark-mode .blog-item img,
@@ -731,43 +721,12 @@ body.dark-mode #footer .copyright a:hover {
   color: var(--ctg-text) !important;
 }
 
-/* ==========================================================================
-   14. Dark Mode Minimalist (Tailwind Style)
-   ========================================================================== */
-.theme-switcher-pill {
-  display: inline-flex;
-  align-items: center;
-  background-color: #f1f5f9;
-  border: 1px solid #e2e8f0;
-  border-radius: 9999px;
-  padding: 3px;
-  gap: 2px;
-}
-
+/* ========================================================================== */
+/* 14. Dark Mode Minimalist (Tailwind Style)                                 */
+/* ========================================================================== */
 body.dark-mode .theme-switcher-pill {
   background-color: var(--ctg-surface-2);
   border-color: var(--ctg-border);
-}
-
-.theme-btn {
-  background: transparent !important;
-  border: none !important;
-  outline: none !important;
-  border-radius: 9999px !important;
-  width: 28px !important;
-  height: 28px !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  color: #64748b !important;
-  cursor: pointer;
-  transition: all 0.2s ease;
-  padding: 0 !important;
-  box-shadow: none !important;
-}
-
-.theme-btn:hover {
-  color: #0f172a !important;
 }
 
 body.dark-mode .theme-btn {
@@ -778,61 +737,15 @@ body.dark-mode .theme-btn:hover {
   color: var(--ctg-text) !important;
 }
 
-.theme-btn.active {
-  background-color: #ffffff !important;
-  color: #0f172a !important;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) !important;
-}
-
 body.dark-mode .theme-btn.active {
   background-color: var(--ctg-surface-3) !important;
   color: var(--ctg-text) !important;
   box-shadow: none !important;
 }
 
-.theme-btn:focus-visible {
-  outline: 2px solid var(--ctg-brand-text) !important;
-  outline-offset: 2px !important;
-}
-
-.theme-btn svg {
-  stroke: currentColor;
-  filter: none !important;
-}
-
 /* ==========================================================================
    15. Back to Top button
    ========================================================================== */
-.back-to-top {
-  position: fixed !important;
-  bottom: 0 !important;
-  right: 25px !important;
-  width: 48px !important;
-  height: 38px !important;
-  border-radius: 6px 6px 0 0 !important; 
-  background-color: #333333 !important; 
-  color: #ffffff !important;
-  border: none !important;
-  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.15) !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  cursor: pointer !important;
-  opacity: 0 !important;
-  visibility: hidden !important;
-  transition: all 0.25s ease-in-out !important;
-  z-index: 99999 !important;
-}
-
-.back-to-top.show {
-  opacity: 1 !important;
-  visibility: visible !important;
-}
-
-.back-to-top:hover {
-  background-color: #1a1a1a !important;
-  transform: translateY(-2px) !important;
-}
 
 body.dark-mode .back-to-top {
   background-color: var(--ctg-surface-2) !important;
