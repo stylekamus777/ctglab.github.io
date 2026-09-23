@@ -1,12 +1,12 @@
-{{ if .Site.Data.formermembers.enable }}
+{{ if hugo.Data.formermembers.enable }}
 {{ "<!-- formermembers Section Start -->" | safeHTML }}
 <section id="team">
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-12">
-				{{ with .Site.Data.formermembers.title }}<h2 class="subtitle-former text-center">{{ . }}</h2>{{ end }}
+				{{ with hugo.Data.formermembers.title }}<h2 class="subtitle-former text-center">{{ . }}</h2>{{ end }}
 			</div>
-			{{ range $index, $element:= .Site.Data.formermembers.members }}
+			{{ range $index, $element:= hugo.Data.formermembers.members }}
 			<div class="col-md-3 col-sm-6">
 				{{ $delay := mul $index 300 }}
 				<div class="team-member wow fadeInLeft" data-wow-duration="500ms" data-wow-delay="{{ $delay }}ms">

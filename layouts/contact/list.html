@@ -2,41 +2,14 @@
 
 {{ partial "page-title.html" . }}
 
-{{ if .Site.Data.contact.enable }}
+{{ if hugo.Data.contact.enable }}
 {{ "<!-- Contact Section Start -->" | safeHTML }}
 <section id="contact-section">
   <div class="container">
     <div class="row">
       <div class="col">
         <div class="block">
-          <div class="row address-details">
-            <div class="col-lg-3 col-sm-6">
-              <div class="address wow fadeInLeft" data-wow-duration="500ms" data-wow-delay=".3s">
-                <i class="ion-ios-location-outline"></i>
-                {{ with .Site.Data.contact.officeAddress1 }}<h5>{{ . }}</h5>{{ end }}
-              </div>
-            </div>
-            <div class="col-lg-3 col-sm-6">
-              <div class="address wow fadeInLeft" data-wow-duration="500ms" data-wow-delay=".5s">
-                <i class="ion-ios-location-outline"></i>
-                {{ with .Site.Data.contact.officeAddress2 }}<h5>{{ . }}</h5>{{ end }}
-              </div>
-            </div>
-            <div class="col-lg-3 col-sm-6">
-              <div class="email wow fadeInLeft" data-wow-duration="500ms" data-wow-delay=".7s">
-                <i class="ion-ios-email-outline"></i>
-                <p>{{ with .Site.Data.contact.mail1 }}{{ . }}{{ end }}
-                  <br>{{ with .Site.Data.contact.mail2 }}{{ . }}{{ end }}</p>
-              </div>
-            </div>
-            <div class="col-lg-3 col-sm-6">
-              <div class="phone wow fadeInLeft" data-wow-duration="500ms" data-wow-delay=".9s">
-                <i class="ion-ios-telephone-outline"></i>
-                <p>{{ with .Site.Data.contact.phone1 }}{{ . }}{{ end }}
-                  <br>{{ with .Site.Data.contact.phone2 }}{{ . }}{{ end }}</p>
-              </div>
-            </div>
-          </div>
+          {{ partial "contact-cards.html" . }}
         </div>
       </div>
     </div>

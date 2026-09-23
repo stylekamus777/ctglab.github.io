@@ -5,7 +5,7 @@
     <div class="album">
         <div class="container">
             <div class="row" style="margin-top: 20px;">
-                {{ range $index, $element:= .Site.Data.tools.tools }}
+                {{ range $index, $element:= hugo.Data.tools.tools }}
                 <div class="col-md-4">
                     <div class="card mb-4 box-shadow">
                         {{ with .image }}

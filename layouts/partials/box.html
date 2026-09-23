@@ -1,59 +1,16 @@
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-
-<section>
-    <div class="container" style="margin-top: 20px;">
-        <div class="row"> <!-- Use Bootstrap's grid system here -->
+<section class="news-list">
+    <div class="container">
+        <div class="news-list-items">
             {{ range $index, $page := sort .Data.Pages "Params.eventDate" "desc" }}
-            <div class="col-sm-6 col-md-4 col-lg-3 mb-4"> <!-- Wrap each card in a 'col' div -->
-                <div class="card h-100">
-                    <img class="card-img-top" src="{{ .Params.image | absURL}}" alt="{{ $page.Title }}" style="height: 180px; object-fit: cover;">
-                    <div class="card-body">
-                        <h5 class="card-title">{{ .Title }}</h5>
-                        <p class="card-author">{{ .Params.With }}</p>
-                    </div>
-                    <div class="card-footer text-center">
-                        <button class="btn btn-primary align-items-center justify-content-center" type="button" data-toggle="collapse" data-target="#collapse{{ $page.File.BaseFileName }}" aria-expanded="false" aria-controls="collapse{{ $page.File.BaseFileName }}">
-                            <!-- <span>See More</span> -->
-                            <i class="fas fa-arrow-down ms-2 collapse-arrow"></i>
-                        </button>
-                        <div class="row">
-                            <div class="col-12">
-                                <div class="collapse" id="collapse{{ $page.File.BaseFileName }}" data-parent=".accordion"> <!-- Add the 'data-parent' attribute here -->
-                                    <div class="card card-body">
-                                        <p class="mb-0"> {{ .Params.eventDate }}  {{ .Content }}</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+            <article class="news-card">
+                <img class="news-card-image" src="{{ .Params.image | absURL }}" alt="{{ $page.Title }}">
+                <div class="news-card-content">
+                    <h3 class="news-card-title">{{ .Title }}</h3>
+                    <p class="news-card-meta">{{ .Params.With }} <span>/</span> {{ .Params.eventDate }}</p>
+                    <p class="news-card-excerpt">{{ .Summary }}</p>
                 </div>
-            </div>
+            </article>
             {{ end }}
         </div>
     </div>
-<style>
-    .collapse-arrow {
-        transition: transform 0.2s;
-    }
-    button[aria-expanded="true"] .collapse-arrow {
-        transform: rotate(180deg);
-    }
-</style>
-
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    document.querySelectorAll('[data-toggle="collapse"]').forEach(function(btn) {
-        var targetId = btn.getAttribute('data-target');
-        var target = document.querySelector(targetId);
-        if (target) {
-            target.addEventListener('show.bs.collapse', function() {
-                btn.setAttribute('aria-expanded', 'true');
-            });
-            target.addEventListener('hide.bs.collapse', function() {
-                btn.setAttribute('aria-expanded', 'false');
-            });
-        }
-    });
-});
-</script>
 </section>

@@ -1,8 +1,13 @@
 <!DOCTYPE html>
-<html lang="{{ with .Site.LanguageCode }}{{ . }}{{ else }}en-US{{ end }}">
+<html lang="{{ with .Language.Locale }}{{ . }}{{ else }}en-US{{ end }}">
 {{- partial "head.html" . -}}
 
 <body>
+  <script>
+    if (document.documentElement.classList.contains("dark-mode")) {
+      document.body.classList.add("dark-mode");
+    }
+  </script>
   {{- partial "header.html" . -}}
   {{- block "main" . }}{{- end }}
   {{- partial "footer.html" . -}}
