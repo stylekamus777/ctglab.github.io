@@ -12,18 +12,6 @@
   <title>{{ .Title }}</title>
   <link rel="icon" href="{{ `images/favicon.ico` | absURL }}">
 
-  <script>
-    (function () {
-      try {
-        var savedTheme = localStorage.getItem("theme");
-        var prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-        if (savedTheme === "dark" || (savedTheme !== "light" && prefersDark)) {
-          document.documentElement.classList.add("dark-mode");
-        }
-      } catch (error) {}
-    }());
-  </script>
-
   {{ "<!-- Twitter Bootstrs CSS -->" | safeHTML }}
   <link rel="stylesheet" href="{{ `plugins/bootstrap/bootstrap.min.css` | absURL }}">
   {{ "<!-- Ionicons Fonts Css -->" | safeHTML }}
@@ -39,6 +27,5 @@
   {{ "<!-- template main css file -->" | safeHTML }}
   {{ $styles := resources.Get "css/style.css" | minify | fingerprint }}
   <link rel="stylesheet" href="{{ $styles.Permalink }}" media="screen">
-  <link rel="stylesheet" href="{{ `css/darkmode.css` | absURL }}?v=20260923">
   
 </head>

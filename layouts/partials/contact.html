@@ -12,18 +12,9 @@
         </div>
       </div>
     </div>
-    <div class="row">
-        <div class="col-md-6">
-            <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11534.52037925938!2d10.4248623!3d43.7182358!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x946da063f970ba06!2sIIT-CNR%20Istituto%20di%20Informatica%20e%20Telematica!5e0!3m2!1sit!2sit!4v1642584698845!5m2!1sit!2sit"
-                    width="100%" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>
-        </div>
-        <div class="col-md-6">
-            <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11608.16889509369!2d11.3037129!3d43.3343055!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x6e5e4e87e639be7b!2sFondazione%20Toscana%20Life%20Sciences!5e0!3m2!1sit!2sit!4v1642502632817!5m2!1sit!2sit"
-                    width="100%" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>
-        </div>
-    </div>
+    
+    {{ partial "maps.html" . }}
+
     {{ partial "contact-cards.html" . }}
   </div>
 </section>

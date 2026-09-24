@@ -1,108 +1,54 @@
-{{ "<!-- Footer Section Start -->" | safeHTML }}
 <footer id="footer">
   <div class="container">
-    <div class="row content-justify-between">
-      <div class="col-md-8 col-12 text-center text-lg-left text-md-left">
-        <p class="copyright">Copyright:
-          <span>
-            <script>
-              document.write(new Date().getFullYear())
-            </script>
-          </span> CTGLab. Based on theme developed by
-          <a href="http://www.Themefisher.com" target="_blank">Themefisher</a>.
-          <br> Visit their store for bootstrap themes.
-          <a href="https://themefisher.com/free-bootstrap-templates/" target="_blank">Store</a>
-        </p>
-      </div>
-      <div class="col-md-4 col-12 text-center text-lg-right text-md-right mt-3 mt-md-0">
-        <div class="theme-switcher-pill" id="theme-switcher">
-          <button type="button" class="theme-btn" data-theme="system" title="Tema del Sistema" aria-label="Tema del Sistema">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
-          </button>
-          <button type="button" class="theme-btn" data-theme="light" title="Modo Claro" aria-label="Modo Claro">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line></svg>
-          </button>
-          <button type="button" class="theme-btn" data-theme="dark" title="Modo Oscuro" aria-label="Modo Oscuro">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
-          </button>
+    <div class="row align-items-center">
+      <div class="col-md-8 col-sm-12">
+        <div class="copyright">
+          <p>
+            Copyright {{ now.Format "2006" }}
+            {{ with .Site.Params.copyright }}
+              {{ . | markdownify }}
+            {{ else }}
+              {{ .Site.Title }}. Based on theme developed by <a href="https://themefisher.com" target="_blank" rel="noopener">Themefisher</a>.<br>
+              Visit their store for bootstrap themes: <a href="https://themefisher.com" target="_blank" rel="noopener">Store</a>
+            {{ end }}
+          </p>
         </div>
+      </div>
+      <div class="col-md-4 col-sm-12">
+        <ul class="social">
+          {{ range .Site.Params.footer.social }}
+            <li>
+              <a href="{{ .link | safeURL }}" target="_blank" rel="noopener" aria-label="{{ .name }}">
+                <i class="{{ .icon }}"></i>
+              </a>
+            </li>
+          {{ end }}
+        </ul>
       </div>
     </div>
   </div>
 </footer>
-{{ "<!-- footer section end -->" | safeHTML }}
 
-{{ "<!-- jquery -->" | safeHTML }}
-<script src="{{ `plugins/jQurey/jquery.min.js` | absURL }}"></script>
-{{ "<!-- slick slider -->" | safeHTML }}
-<script src="{{ `plugins/slick/slick.min.js` | absURL }}"></script>
-{{ "<!-- bootstrap js -->" | safeHTML }}
-<script src="{{ `plugins/bootstrap/bootstrap.min.js` | absURL }}"></script>
-{{ "<!-- wow js -->" | safeHTML }}
-<script src="{{ `plugins/wow-js/wow.min.js` | absURL }}"></script>
-{{ "<!-- Fancybox -->" | safeHTML }}
-<script src="{{ `plugins/facncybox/jquery.fancybox.js` | absURL }}"></script>
-{{ "<!-- template main js -->" | safeHTML }}
-{{ $script := resources.Get "js/script.js" | minify}}
-<script src="{{ $script.Permalink }}"></script>
-{{ "<!-- google analitycs -->" | safeHTML }}
-<script>
-  (function (i, s, o, g, r, a, m) {
-    i['GoogleAnalyticsObject'] = r;
-    i[r] = i[r] || function () {
-      (i[r].q = i[r].q || []).push(arguments)
-    }, i[r].l = 1 * new Date();
-    a = s.createElement(o),
-      m = s.getElementsByTagName(o)[0];
-    a.async = 1;
-    a.src = g;
-    m.parentNode.insertBefore(a, m)
-  })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
-  ga('create', '{{ .Site.Params.googleAnalitycsID }}', 'auto');
-  ga('send', 'pageview');
-</script>
-
-<button id="back-to-top" class="back-to-top" aria-label="Volver arriba">
-  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 15l-6-6-6 6"/></svg>
+<button id="back-to-top" class="back-to-top" title="Volver arriba" aria-label="Volver arriba">
+  <i class="ion-chevron-up"></i>
 </button>
 
 <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const buttons = document.querySelectorAll(".theme-btn");
-    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)");
-    const backToTop = document.getElementById("back-to-top");
-
-    function applyTheme(theme) {
-      const dark = theme === "dark" || (theme === "system" && prefersDark.matches);
-      document.documentElement.classList.toggle("dark-mode", dark);
-      document.body.classList.toggle("dark-mode", dark);
-      buttons.forEach(function (button) {
-        button.classList.toggle("active", button.dataset.theme === theme);
-      });
-      if (theme === "system") {
-        localStorage.removeItem("theme");
+  const backToTopBtn = document.getElementById("back-to-top");
+  if (backToTopBtn) {
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 300) {
+        backToTopBtn.classList.add("show");
       } else {
-        localStorage.setItem("theme", theme);
+        backToTopBtn.classList.remove("show");
       }
-    }
-
-    applyTheme(localStorage.getItem("theme") || "system");
-    buttons.forEach(function (button) {
-      button.addEventListener("click", function () {
-        applyTheme(button.dataset.theme);
-      });
-    });
-    prefersDark.addEventListener("change", function () {
-      if (!localStorage.getItem("theme")) applyTheme("system");
     });
 
-    if (backToTop) {
-      window.addEventListener("scroll", function () {
-        backToTop.classList.toggle("show", window.scrollY > 200);
+    backToTopBtn.addEventListener("click", () => {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
       });
-      backToTop.addEventListener("click", function () {
-        window.scrollTo({ top: 0, behavior: "smooth" });
-      });
-    }
-  });
+    });
+  }
 </script>

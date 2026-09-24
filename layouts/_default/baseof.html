@@ -3,11 +3,7 @@
 {{- partial "head.html" . -}}
 
 <body>
-  <script>
-    if (document.documentElement.classList.contains("dark-mode")) {
-      document.body.classList.add("dark-mode");
-    }
-  </script>
+
   {{- partial "header.html" . -}}
   {{- block "main" . }}{{- end }}
   {{- partial "footer.html" . -}}
