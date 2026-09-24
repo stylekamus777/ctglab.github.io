@@ -1,762 +1,335 @@
-/* ==========================================================================
-   0. Dark Mode Tokens
-   ========================================================================== */
+/* Dark-mode token overrides and component-specific overrides. */
 html.dark-mode {
   color-scheme: dark;
-
-  /* Surfaces */
-  --ctg-bg:            #0d0b12;
-  --ctg-surface:       #15121c;
-  --ctg-surface-2:     #1e1929;
-  --ctg-surface-3:     #2a2437;
-
-  /* Borders */
-  --ctg-border:        rgba(255, 255, 255, 0.07);
-  --ctg-border-strong: #3a3349;
-
-  /* Text */
-  --ctg-text:          #edeaf2;
-  --ctg-text-2:        #a9a2b8;
-  --ctg-text-3:        #756d86;
-
-  --ctg-brand:         #c32a8e;
-  --ctg-brand-hover:   #d8399f;
-  --ctg-brand-text:    #f07fc8;
-  --ctg-brand-tint:    rgba(195, 42, 142, 0.16);
-  --ctg-brand-ring:    rgba(240, 127, 200, 0.32);
-
-  /* Logo Violet */
-  --ctg-violet:        #9a8bff;
-
-  /* Data Accent */
-  --ctg-data:          #4fd1c5;
-  --ctg-data-tint:     rgba(79, 209, 197, 0.12);
-
-  /* Shadows */
-  --ctg-shadow-1:      0 1px 2px rgba(0, 0, 0, 0.5);
-  --ctg-shadow-2:      0 6px 18px rgba(0, 0, 0, 0.45);
+  --ctg-bg: #0d0b12;
+  --ctg-surface: #15121c;
+  --ctg-surface-muted: #1e1929;
+  --ctg-surface-accent: #2a2437;
+  --ctg-border: rgba(255, 255, 255, 0.07);
+  --ctg-border-muted: #3a3349;
+  --ctg-text: #edeaf2;
+  --ctg-text-muted: #a9a2b8;
+  --ctg-text-subtle: #756d86;
+  --ctg-brand: #c32a8e;
+  --ctg-brand-hover: #d8399f;
+  --ctg-brand-soft: #2a2437;
+  --ctg-link: #f07fc8;
+  --ctg-tint: rgba(195, 42, 142, 0.16);
+  --ctg-data: #4fd1c5;
+  --ctg-data-tint: rgba(79, 209, 197, 0.12);
+  --ctg-control-bg: #1e1929;
+  --ctg-control-border: rgba(255, 255, 255, 0.07);
+  --ctg-control-text: #756d86;
+  --ctg-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
 }
 
-/* ==========================================================================
-   1. Base Dark Mode
-   ========================================================================== */
-:root.dark-mode,
 html.dark-mode,
-body.dark-mode {
+html.dark-mode body,
+html.dark-mode #wrapper,
+html.dark-mode main,
+html.dark-mode section,
+html.dark-mode .pages,
+html.dark-mode .container-fluid {
   background-color: var(--ctg-bg) !important;
   color: var(--ctg-text) !important;
 }
 
-html.dark-mode ::selection {
-  background: var(--ctg-brand-tint);
-  color: var(--ctg-text);
-}
-
-body.dark-mode ::-webkit-scrollbar {
-  width: 12px;
-  height: 12px;
-}
-
-body.dark-mode ::-webkit-scrollbar-track {
-  background: var(--ctg-bg);
-}
-
-body.dark-mode ::-webkit-scrollbar-thumb {
-  background: var(--ctg-surface-3);
-  border: 3px solid var(--ctg-bg);
-  border-radius: 999px;
-}
-
-body.dark-mode ::-webkit-scrollbar-thumb:hover {
-  background: var(--ctg-border-strong);
-}
-
-body.dark-mode a:focus-visible,
-body.dark-mode button:focus-visible,
-body.dark-mode summary:focus-visible,
-body.dark-mode input:focus-visible,
-body.dark-mode textarea:focus-visible,
-body.dark-mode .btn:focus-visible {
-  outline: 2px solid var(--ctg-brand-text) !important;
-  outline-offset: 2px !important;
-  border-radius: 4px;
-}
-
-/* ==========================================================================
-   3. Header & Nav Bar
-   ========================================================================== */
-body.dark-mode .top-bar,
-body.dark-mode .animated-header,
-body.dark-mode header,
-body.dark-mode header.navigation,
-body.dark-mode section.top-bar,
-body.dark-mode #global-header {
-  background-color: var(--ctg-surface) !important;
-  border-bottom: 1px solid var(--ctg-border) !important;
-  box-shadow: var(--ctg-shadow-1) !important;
-}
-
-body.dark-mode .top-bar *,
-body.dark-mode .animated-header *,
-body.dark-mode header *,
-body.dark-mode .navigation,
-body.dark-mode .navbar,
-body.dark-mode .navbar-light,
-body.dark-mode .bg-light,
-body.dark-mode .navigation .container {
-  background-color: transparent !important;
-  box-shadow: none !important;
-}
-
-body.dark-mode .dropdown-menu {
-  background-color: var(--ctg-surface-2) !important;
-  border: 1px solid var(--ctg-border) !important;
-  box-shadow: var(--ctg-shadow-2) !important;
-}
-
-body.dark-mode .dropdown-item {
-  color: var(--ctg-text-2) !important;
-}
-
-body.dark-mode .dropdown-item:hover,
-body.dark-mode .dropdown-item:focus {
-  background-color: var(--ctg-surface-3) !important;
-  color: var(--ctg-text) !important;
-}
-
-body.dark-mode .navigation .navbar-nav .nav-link,
-body.dark-mode .navbar-nav .nav-link,
-body.dark-mode .navigation a {
-  color: var(--ctg-text) !important;
-  font-weight: 500 !important;
-  transition: color 0.2s ease, background-color 0.2s ease;
-}
-
-body.dark-mode .navigation .navbar-nav .nav-link:hover,
-body.dark-mode .navbar-nav .nav-link:hover {
-  color: var(--ctg-brand-text) !important; 
-}
-
-body.dark-mode .navigation .navbar-nav .nav-item.active .nav-link,
-body.dark-mode .navbar-nav .active > .nav-link {
-  color: var(--ctg-text) !important;
-  border-bottom: 2px solid var(--ctg-brand) !important;
-}
-
-body.dark-mode .navbar-toggler {
-  background-color: transparent !important; 
-  border: none !important; 
-  padding: 4px !important;
-  box-shadow: none !important;
-}
-
-body.dark-mode .navbar-toggler-icon {
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23edeaf2' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2.5' d='M5 8h20M5 15h20M5 22h20'/%3e%3c/svg%3e") !important;
-}
-
-/* ==========================================================================
-   4. Secondary Pages Bars 
-   ========================================================================== */
-body.dark-mode .global-page-header,
-body.dark-mode section.global-page-header,
-body.dark-mode .page-header,
-body.dark-mode section[class*="page-header"] {
-  background: linear-gradient(180deg, #161224 0%, var(--ctg-bg) 100%) !important;
-  box-shadow: none !important;
-  border: none !important;
-  text-align: center !important;
-}
-
-body.dark-mode .global-page-header .container,
-body.dark-mode .global-page-header .row,
-body.dark-mode .global-page-header .col-md-12,
-body.dark-mode .page-header .container {
-  background: transparent !important;
-  box-shadow: none !important;
-  border: none !important;
-  text-align: center !important;
-}
-
-body.dark-mode .global-page-header .block,
-body.dark-mode .page-header .block {
-  background-color: var(--ctg-surface) !important;
-  border: 1px solid var(--ctg-border) !important;
-  border-radius: 12px !important;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4) !important;
-  display: inline-block !important;
-  margin: 0 auto !important;
-}
-
-body.dark-mode .global-page-header .block h1,
-body.dark-mode .page-header .block h1,
-body.dark-mode .global-page-header .block h2,
-body.dark-mode .page-header .block h2,
-body.dark-mode .global-page-header .block *,
-body.dark-mode .page-header .block * {
-  background: transparent !important;
-  color: var(--ctg-text) !important;
-}
-
-/* ==========================================================================
-   5. Home Banner (#hero-area)
-   ========================================================================== */
-body.dark-mode #hero-area {
-  position: relative !important;
-  background-color: #121212 !important;
-}
-
-body.dark-mode #hero-area::before {
-  content: "" !important;
-  position: absolute !important;
-  inset: 0 !important; 
-  background-color: rgba(18, 18, 18, 0.75) !important;
-  z-index: 1 !important;
-}
-
-body.dark-mode #hero-area * {
-  position: relative !important;
-  z-index: 2 !important;
-}
-
-body.dark-mode #hero-area .block {
-  background: transparent !important;
-  border: none !important;
-  box-shadow: none !important;
-  padding: 0 !important;
-}
-
-body.dark-mode #hero-area h1 span,
-body.dark-mode #hero-area section.cd-intro h1 span,
-body.dark-mode #hero-area h2 {
-  color: var(--ctg-text) !important;
-  opacity: 1 !important;
-  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.8) !important;
-}
-
-/* ==========================================================================
-   7. Dark Mode Google Maps
-   ========================================================================== */
-body.dark-mode iframe,
-body.dark-mode .map-holder iframe,
-body.dark-mode #map iframe,
-body.dark-mode .google-map iframe {
-  filter: invert(90%) hue-rotate(180deg) contrast(100%) saturate(85%) !important;
-  border-radius: 12px !important;
-  border: 1px solid var(--ctg-border) !important;
-  transition: filter var(--ctg-dur) ease;
-}
-
-/* ==========================================================================
-   8. Contacts & Address Cards
-   ========================================================================== */
-body.dark-mode #contact-section,
-body.dark-mode .address-details {
-  background: transparent !important;
-  background-color: transparent !important;
-  box-shadow: none !important;
-  border: none !important;
-}
-
-body.dark-mode .address-details .address,
-body.dark-mode .address-details .email,
-body.dark-mode .address-details .phone {
-  background-color: var(--ctg-surface) !important;
-  border: 1px solid var(--ctg-border) !important;
-  border-radius: 12px !important;
-  box-shadow: var(--ctg-shadow-1) !important;
-  padding: 28px 20px !important;
-  text-align: center !important;
-  transition: border-color 0.2s ease, background-color 0.2s ease;
-}
-
-body.dark-mode .address-details .address:hover,
-body.dark-mode .address-details .email:hover,
-body.dark-mode .address-details .phone:hover {
-  background-color: var(--ctg-surface-2) !important;
-  border-color: var(--ctg-border-strong) !important;
-}
-
-body.dark-mode .address-details .address *,
-body.dark-mode .address-details .email *,
-body.dark-mode .address-details .phone *,
-body.dark-mode .address-details h5,
-body.dark-mode .address-details h6,
-body.dark-mode .address-details p {
-  color: var(--ctg-text-2) !important;
-  background: transparent !important;
-}
-
-body.dark-mode .address-details i {
-  filter: none !important;
-}
-
-body.dark-mode .address-details .address i,
-body.dark-mode .address-details .email i,
-body.dark-mode .address-details .phone i {
-  background-color: var(--ctg-brand-tint) !important;
-  color: var(--ctg-brand-text) !important;
-  border-radius: 50% !important;
-  width: 56px !important;
-  height: 56px !important;
-  line-height: 56px !important;
-  font-size: 32px !important;
-  text-align: center !important;
-  display: inline-block !important;
-  margin-bottom: 12px !important;
-}
-
-body.dark-mode .address-details h6,
-body.dark-mode .address-details p {
-  font-family: "Geosanslight", sans-serif !important;
-  font-size: 16px !important;
-  line-height: 1.5 !important;
-  font-weight: 500 !important;
-}
-
-body.dark-mode .address-details p,
-body.dark-mode .address-details p span,
-body.dark-mode .address-details p a {
-  font-family: "Roboto", sans-serif !important;
-  font-size: 14px !important;
-  line-height: 1.5 !important;
-  font-weight: 500 !important;
-}
-
-body.dark-mode .address-details .email p,
-body.dark-mode .address-details .email a,
-body.dark-mode .address-details .email span,
-body.dark-mode .address-details .phone p,
-body.dark-mode .address-details .phone a,
-body.dark-mode .address-details .phone span {
-  font-family: "Roboto", sans-serif !important;
-  font-size: 14px !important;
-  line-height: 1.5 !important;
-  font-weight: 500 !important;
-  letter-spacing: normal;
-  word-break: break-word;
-  text-decoration: none !important;
-}
-
-body.dark-mode .address-details .email a,
-body.dark-mode .address-details .phone a {
-  color: var(--ctg-text-2) !important;
-  text-decoration: none !important;
-}
-
-/* ==========================================================================
-   9. Publications and General Cards
-   ========================================================================== */
-body.dark-mode .service-item,
-body.dark-mode .card,
-body.dark-mode .publication-item,
-body.dark-mode .portfolio-item {
-  background-color: var(--ctg-surface) !important;
-  border: 1px solid var(--ctg-border) !important;
-  border-radius: 12px !important;
-  box-shadow: none !important;
-  transition: border-color 0.2s ease, background-color 0.2s ease;
-}
-
-body.dark-mode .service-item:hover,
-body.dark-mode .card:hover,
-body.dark-mode .publication-item:hover,
-body.dark-mode .portfolio-item:hover {
-  background-color: var(--ctg-surface-2) !important;
-  border-color: var(--ctg-border-strong) !important;
-}
-
-body.dark-mode .publication-item .meta,
-body.dark-mode .publication-item .journal,
-body.dark-mode .publication-item small,
-body.dark-mode .publication-meta {
-  color: var(--ctg-text-2) !important;
-}
-
-body.dark-mode .publication-item .authors a,
-body.dark-mode .authors a {
-  color: var(--ctg-brand-text) !important;
-  text-decoration: none !important;
-}
-
-body.dark-mode .publication-item .authors a:hover,
-body.dark-mode .authors a:hover {
-  text-decoration: underline !important;
-  text-underline-offset: 3px;
-}
-
-body.dark-mode a[href*="doi.org"],
-body.dark-mode .doi,
-body.dark-mode .doi a {
-  color: var(--ctg-data) !important;
-  font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace !important;
-  font-size: 0.88em !important;
-  letter-spacing: 0.01em;
-}
-
-/* ==========================================================================
-   9b. Inherited Light Mode Images
-   ========================================================================== */
-body.dark-mode .card img.card-img-top {
-  filter: invert(94%) hue-rotate(180deg) saturate(0.9) brightness(0.95) !important;
-  transition: filter 0.2s ease;
-}
-
-body.dark-mode .card:hover img.card-img-top {
-  filter: invert(92%) hue-rotate(180deg) saturate(0.85) brightness(1) !important;
-}
-
-body.dark-mode .card {
-  background-color: var(--ctg-surface) !important;
-  border: 1px solid var(--ctg-border) !important;
-  box-shadow: none !important;
-}
-
-body.dark-mode .card .card-body {
-  background-color: transparent !important;
-}
-
-body.dark-mode .card .card-text,
-body.dark-mode .card .card-text .p {
-  color: var(--ctg-text-2) !important;
-  font-size: 0.95em !important;
-  line-height: 1.6 !important;
-}
-
-body.dark-mode .card .github-btn {
-  background-color: transparent !important;
-  color: var(--ctg-text) !important;
-  border: 1px solid var(--ctg-border-strong) !important;
-  border-radius: 6px !important;
-  padding: 8px 14px !important;
-  font-size: 0.9em !important;
-  margin-right: 8px !important;
-  margin-bottom: 8px !important;
-  transition: all 0.2s ease;
-}
-
-body.dark-mode .card .github-btn:hover {
-  background-color: var(--ctg-surface-2) !important;
-  color: var(--ctg-text) !important;
-  border-color: var(--ctg-border-strong) !important;
-}
-
-body.dark-mode .card .github-btn i {
-  margin-right: 6px !important;
-}
-
-body.dark-mode .team-member .team-img {
-  border-radius: 12px !important;
-  overflow: hidden !important;
-  border: 1px solid var(--ctg-border) !important;
-  background-color: var(--ctg-surface) !important;
-  line-height: 0 !important;
-}
-
-body.dark-mode .team-member .team-pic {
-  filter: brightness(0.9) contrast(1.05) saturate(0.95) !important;
-  transition: filter 0.25s ease;
-  display: block !important;
-  width: 100% !important;
-}
-
-body.dark-mode .team-member:hover .team-pic {
-  filter: brightness(1) contrast(1) saturate(1) !important;
-}
-
-body.dark-mode .team-member {
-  padding-bottom: 8px;
-}
-
-body.dark-mode .team-member .team_name {
-  color: var(--ctg-text) !important;
-  margin-top: 16px !important;
-}
-
-body.dark-mode .team-member .team_designation {
-  color: var(--ctg-text-3) !important;
-  font-size: 0.9em !important;
-}
-
-body.dark-mode .team-member .team_text {
-  color: var(--ctg-text-2) !important;
-}
-
-body.dark-mode .team-member .social-icons a {
-  color: var(--ctg-text-3) !important;
-  display: inline-flex !important;
-  align-items: center;
-  justify-content: center;
-  width: 32px;
-  height: 32px;
-  border-radius: 8px;
-  transition: color 0.2s ease, background-color 0.2s ease;
-}
-
-body.dark-mode .team-member .social-icons a:hover {
-  color: var(--ctg-brand-text) !important;
-  background-color: var(--ctg-brand-tint) !important;
-}
-
-body.dark-mode .team-member .social-icon {
-  fill: currentColor !important;
-  width: 18px !important;
-  height: 18px !important;
-}
-
-body.dark-mode .blog-item img,
-body.dark-mode .post-thumb img,
-body.dark-mode article img {
-  filter: brightness(0.9) !important;
-  border-radius: 10px !important;
-  transition: filter 0.2s ease;
-}
-
-body.dark-mode .blog-item:hover img,
-body.dark-mode .post-thumb:hover img,
-body.dark-mode article img:hover {
-  filter: brightness(1) !important;
-}
-
-body.dark-mode .navbar-brand img,
-body.dark-mode .footer-logo img {
-  filter: brightness(1.18) saturate(0.92) !important;
-  border: none !important;
-}
-
-/* ==========================================================================
-   10. Native HTML Elements (<details> and <summary>)
-   ========================================================================== */
-body.dark-mode details,
-body.dark-mode summary {
-  background-color: var(--ctg-surface) !important;
-  color: var(--ctg-text) !important;
-  border-color: var(--ctg-border) !important;
-}
-
-body.dark-mode details summary:hover,
-body.dark-mode details summary:focus,
-body.dark-mode details[open] summary {
-  background-color: var(--ctg-surface-2) !important;
-  color: var(--ctg-text) !important;
-}
-
-body.dark-mode details * {
-  color: var(--ctg-text-2) !important;
-}
-
-body.dark-mode summary * {
-  color: var(--ctg-text) !important;
-}
-
-body.dark-mode .project-years {
-  color: var(--ctg-text-3) !important;
-  font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace !important;
-  font-size: 0.9em !important;
-}
-
-/* ==========================================================================
-   11. Buttons & Interactions
-   ========================================================================== */
-body.dark-mode .btn,
-body.dark-mode .btn-main,
-body.dark-mode .btn-sm,
-body.dark-mode button:not(.theme-btn):not(.navbar-toggler) {
-  background-color: var(--ctg-brand) !important;
-  color: #ffffff !important;
-  border: 1px solid transparent !important;
-  border-radius: 8px !important;
-  box-shadow: none !important;
-  transition: background-color 0.2s ease, border-color 0.2s ease;
-}
-
-body.dark-mode .btn:hover,
-body.dark-mode .btn-main:hover,
-body.dark-mode button:not(.theme-btn):not(.navbar-toggler):hover {
-  background-color: var(--ctg-brand-hover) !important;
-  color: #ffffff !important;
-  border-color: transparent !important;
-  box-shadow: none !important;
-}
-
-body.dark-mode .btn-secondary,
-body.dark-mode .btn-outline-primary,
-body.dark-mode .btn-light,
-body.dark-mode .btn-default,
-body.dark-mode .btn-white,
-body.dark-mode a.btn[href$=".pdf"] {
-  background-color: transparent !important;
-  color: var(--ctg-text) !important;
-  border: 1px solid var(--ctg-border-strong) !important;
-}
-
-body.dark-mode .btn-secondary:hover,
-body.dark-mode .btn-outline-primary:hover,
-body.dark-mode .btn-light:hover,
-body.dark-mode .btn-default:hover,
-body.dark-mode .btn-white:hover,
-body.dark-mode a.btn[href$=".pdf"]:hover {
-  background-color: var(--ctg-surface-3) !important;
-  color: var(--ctg-text) !important;
-  border-color: var(--ctg-border-strong) !important;
-}
-
-body.dark-mode a {
-  color: var(--ctg-brand-text) !important;
-}
-
-body.dark-mode a:hover {
-  color: #f7a9da !important;
-}
-
-body.dark-mode p > a:not(.btn) {
-  text-decoration: underline !important;
-  text-decoration-color: var(--ctg-brand-ring) !important;
-  text-underline-offset: 3px;
-}
-
-/* ==========================================================================
-   12. Badges, Pills and Labels
-   ========================================================================== */
-body.dark-mode .badge,
-body.dark-mode .badge-pill,
-body.dark-mode .project-badge,
-body.dark-mode span[class*="badge"] {
-  background: var(--ctg-brand-tint) !important;
-  background-color: var(--ctg-brand-tint) !important;
-  color: var(--ctg-brand-text) !important;
-  border: 1px solid var(--ctg-brand-ring) !important;
-  border-radius: 999px !important;
-  font-weight: 500 !important;
-  letter-spacing: 0.06em;
-  padding: 4px 12px !important;
-}
-
-body.dark-mode .project-badge * {
-  color: var(--ctg-brand-text) !important;
-}
-
-body.dark-mode .publication-type,
-body.dark-mode .badge-type,
-body.dark-mode .badge-open-access {
-  background: var(--ctg-data-tint) !important;
-  color: var(--ctg-data) !important;
-  border-color: rgba(79, 209, 197, 0.28) !important;
-}
-
-/* ==========================================================================
-   13. Global Typography
-   ========================================================================== */
-body.dark-mode h1,
-body.dark-mode h2,
-body.dark-mode h3,
-body.dark-mode h4,
-body.dark-mode h5,
-body.dark-mode h6 {
-  color: var(--ctg-text) !important;
-}
-
-body.dark-mode p,
-body.dark-mode li,
-body.dark-mode span,
-body.dark-mode td,
-body.dark-mode strong {
-  color: var(--ctg-text-2) !important;
-}
-
-body.dark-mode {
+html.dark-mode body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-body.dark-mode p,
-body.dark-mode li {
-  font-weight: 400 !important;
-  line-height: 1.75 !important;
+html.dark-mode header,
+html.dark-mode .top-bar,
+html.dark-mode .animated-header,
+html.dark-mode .navigation,
+html.dark-mode .navbar,
+html.dark-mode footer,
+html.dark-mode .footer {
+  background-color: var(--ctg-surface) !important;
+  border-color: var(--ctg-border) !important;
+  box-shadow: var(--ctg-shadow) !important;
 }
 
-body.dark-mode strong,
-body.dark-mode b {
-  color: var(--ctg-text) !important;
-  font-weight: 600 !important;
-}
-
-body.dark-mode .blog-content p,
-body.dark-mode article p,
-body.dark-mode .publication-item .abstract {
-  max-width: 75ch;
-}
-
-body.dark-mode code,
-body.dark-mode pre {
-  background-color: var(--ctg-surface-2) !important;
-  color: var(--ctg-data) !important;
-  border: 1px solid var(--ctg-border) !important;
-  border-radius: 6px !important;
-}
-
-/* ==========================================================================
-   13b. Footer
-   ========================================================================== */
-body.dark-mode footer,
-body.dark-mode .footer {
-  background-color: #15121c !important; 
-}
-
-body.dark-mode #footer .copyright,
-body.dark-mode #footer .copyright span,
-body.dark-mode #footer p {
-  color: var(--ctg-text-3) !important;
-  font-size: 0.85em !important;
-  background: transparent !important;
-}
-
-body.dark-mode #footer .copyright a {
-  color: var(--ctg-text-2) !important;
-  text-decoration: underline !important;
-  text-decoration-color: var(--ctg-border-strong) !important;
-  text-underline-offset: 3px;
-}
-
-body.dark-mode #footer .copyright a:hover {
-  color: var(--ctg-text) !important;
-}
-
-/* ========================================================================== */
-/* 14. Dark Mode Minimalist (Tailwind Style)                                 */
-/* ========================================================================== */
-body.dark-mode .theme-switcher-pill {
-  background-color: var(--ctg-surface-2);
-  border-color: var(--ctg-border);
-}
-
-body.dark-mode .theme-btn {
-  color: var(--ctg-text-3) !important;
-}
-
-body.dark-mode .theme-btn:hover {
-  color: var(--ctg-text) !important;
-}
-
-body.dark-mode .theme-btn.active {
-  background-color: var(--ctg-surface-3) !important;
-  color: var(--ctg-text) !important;
+html.dark-mode header *,
+html.dark-mode .top-bar *,
+html.dark-mode .navigation .container,
+html.dark-mode .navbar-light {
+  background-color: transparent !important;
   box-shadow: none !important;
 }
 
-/* ==========================================================================
-   15. Back to Top button
-   ========================================================================== */
-
-body.dark-mode .back-to-top {
-  background-color: var(--ctg-surface-2) !important;
+html.dark-mode .navbar-nav .nav-link,
+html.dark-mode .navigation a,
+html.dark-mode .navbar-brand {
   color: var(--ctg-text) !important;
-  border: 1px solid var(--ctg-border-strong) !important;
-  border-bottom: none !important;
-  box-shadow: 0 -2px 12px rgba(0, 0, 0, 0.5) !important;
 }
 
-body.dark-mode .back-to-top:hover {
-  background-color: var(--ctg-surface-3) !important;
-  color: var(--ctg-brand-text) !important;
-  border-color: var(--ctg-brand-ring) !important;
+html.dark-mode .navbar-nav .nav-link:hover,
+html.dark-mode .navigation a:hover {
+  color: var(--ctg-link) !important;
+}
+
+html.dark-mode .global-page-header,
+html.dark-mode .page-header,
+html.dark-mode section[class*="page-header"] {
+  background: linear-gradient(180deg, #161224 0%, var(--ctg-bg) 100%) !important;
+  border: 0 !important;
+}
+
+html.dark-mode .global-page-header *,
+html.dark-mode .page-header * {
+  background-color: transparent !important;
+  color: var(--ctg-text) !important;
+}
+
+html.dark-mode #hero-area {
+  background-color: #121212 !important;
+}
+
+html.dark-mode #hero-area::before {
+  background-color: rgba(18, 18, 18, 0.75) !important;
+}
+
+html.dark-mode #hero-area .container,
+html.dark-mode #hero-area .row,
+html.dark-mode #hero-area [class*="col-"],
+html.dark-mode #hero-area .block,
+html.dark-mode #hero-area .cd-intro,
+html.dark-mode #hero-area h1,
+html.dark-mode #hero-area h1 span,
+html.dark-mode #hero-area h2 {
+  background: transparent !important;
+  background-color: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+html.dark-mode .global-page-header .page-title-card,
+html.dark-mode .page-header .page-title-card {
+  background-color: var(--ctg-surface) !important;
+  border: 1px solid var(--ctg-border) !important;
+  border-radius: 20px !important;
+  box-shadow: var(--ctg-shadow) !important;
+}
+
+html.dark-mode iframe,
+html.dark-mode .map-holder iframe,
+html.dark-mode #map iframe,
+html.dark-mode .google-map iframe {
+  filter: invert(90%) hue-rotate(180deg) contrast(100%) saturate(85%) !important;
+  border: 1px solid var(--ctg-border) !important;
+  border-radius: 12px !important;
+}
+
+html.dark-mode #contact-section,
+html.dark-mode .address-details {
+  background: transparent !important;
+}
+
+html.dark-mode #contact-section .address,
+html.dark-mode #contact-section .email,
+html.dark-mode #contact-section .phone,
+html.dark-mode .publication-item,
+html.dark-mode .card,
+html.dark-mode .service-item,
+html.dark-mode .portfolio-item {
+  background-color: var(--ctg-surface) !important;
+  border: 1px solid var(--ctg-border) !important;
+  box-shadow: var(--ctg-shadow) !important;
+}
+
+html.dark-mode #contact-section .address:hover,
+html.dark-mode #contact-section .email:hover,
+html.dark-mode #contact-section .phone:hover,
+html.dark-mode .publication-item:hover,
+html.dark-mode .card:hover {
+  background-color: var(--ctg-surface-muted) !important;
+  border-color: var(--ctg-border-muted) !important;
+}
+
+html.dark-mode #contact-section .address *,
+html.dark-mode #contact-section .email *,
+html.dark-mode #contact-section .phone *,
+html.dark-mode .publication-item *,
+html.dark-mode .card .card-body {
+  background-color: transparent !important;
+}
+
+html.dark-mode #contact-section .contact-card-text {
+  font-family: "Geosanslight", sans-serif !important;
+  font-size: 15px !important;
+  line-height: 1.5 !important;
+  font-weight: 400 !important;
+}
+
+html.dark-mode .team-member .team-img {
+  border-color: rgba(255, 255, 255, 0.14) !important;
+}
+
+html.dark-mode h1,
+html.dark-mode h2,
+html.dark-mode h3,
+html.dark-mode h4,
+html.dark-mode h5,
+html.dark-mode h6 {
+  color: var(--ctg-text) !important;
+}
+
+html.dark-mode p,
+html.dark-mode li,
+html.dark-mode td,
+html.dark-mode .publication-meta,
+html.dark-mode .publication-authors {
+  color: var(--ctg-text-muted) !important;
+}
+
+html.dark-mode a {
+  color: var(--ctg-link) !important;
+}
+
+html.dark-mode .publication-title,
+html.dark-mode .publication-item .authors a {
+  color: var(--ctg-text) !important;
+}
+
+html.dark-mode .news-card {
+  background-color: var(--ctg-surface) !important;
+  border-color: var(--ctg-border) !important;
+  box-shadow: var(--ctg-shadow) !important;
+}
+
+html.dark-mode .news-card-title {
+  color: var(--ctg-text) !important;
+}
+
+html.dark-mode .news-card-meta,
+html.dark-mode .news-card-excerpt {
+  color: var(--ctg-text-muted) !important;
+}
+
+html.dark-mode .publication-type,
+html.dark-mode .badge,
+html.dark-mode .badge-pill {
+  background: var(--ctg-data-tint) !important;
+  color: var(--ctg-data) !important;
+  border-color: var(--ctg-border) !important;
+}
+
+html.dark-mode .action-btn,
+html.dark-mode .abstract-btn,
+html.dark-mode .btn-primary {
+  background-color: transparent !important;
+  color: var(--ctg-text) !important;
+  border-color: var(--ctg-border-muted) !important;
+}
+
+html.dark-mode #footer .copyright,
+html.dark-mode #footer .copyright span {
+  color: var(--ctg-text-subtle) !important;
+  background: transparent !important;
+}
+
+html.dark-mode .theme-switcher-pill {
+  background-color: var(--ctg-surface-muted) !important;
+  border-color: var(--ctg-border) !important;
+}
+
+html.dark-mode .theme-btn {
+  color: var(--ctg-text-subtle) !important;
+}
+
+html.dark-mode .theme-btn:hover,
+html.dark-mode .theme-btn.active {
+  color: var(--ctg-text) !important;
+}
+
+html.dark-mode .theme-btn.active {
+  background-color: var(--ctg-surface-accent) !important;
+}
+
+html.dark-mode .back-to-top {
+  background-color: var(--ctg-surface-muted) !important;
+  color: var(--ctg-text) !important;
+  border-color: var(--ctg-border-muted) !important;
+}
+
+html.dark-mode .back-to-top:hover {
+  background-color: var(--ctg-surface-accent) !important;
+  color: var(--ctg-link) !important;
+}
+
+html.dark-mode ::selection {
+  background: var(--ctg-tint);
+  color: var(--ctg-text);
+}
+
+html.dark-mode #funded-projects .project-item {
+  background: var(--ctg-surface) !important;
+  border-color: var(--ctg-border) !important;
+  color: var(--ctg-text-muted) !important;
+}
+
+html.dark-mode #funded-projects .project-item:hover,
+html.dark-mode #funded-projects .project-item summary:hover {
+  background: var(--ctg-surface-muted) !important;
+  border-color: var(--ctg-border-muted) !important;
+}
+
+html.dark-mode #funded-projects .project-item summary,
+html.dark-mode #funded-projects .project-title,
+html.dark-mode #funded-projects .project-meta-item strong,
+html.dark-mode #funded-projects .project-collaborators strong {
+  color: var(--ctg-text) !important;
+}
+
+html.dark-mode #funded-projects .project-description,
+html.dark-mode #funded-projects .project-meta,
+html.dark-mode #funded-projects .project-collaborators {
+  color: var(--ctg-text-muted) !important;
+}
+
+html.dark-mode #funded-projects .project-years,
+html.dark-mode #funded-projects .project-badge,
+html.dark-mode #funded-projects .project-item[open] .project-chevron {
+  color: var(--ctg-link) !important;
+}
+
+html.dark-mode #funded-projects .project-badge {
+  background: var(--ctg-brand-soft) !important;
+  border-color: var(--ctg-tint) !important;
+}
+
+html.dark-mode .research-item {
+  background: var(--ctg-surface) !important;
+  border-color: var(--ctg-border) !important;
+  color: var(--ctg-text-muted) !important;
+}
+
+html.dark-mode .research-item:hover,
+html.dark-mode .research-item summary:hover {
+  background: var(--ctg-surface-muted) !important;
+  border-color: var(--ctg-border-muted) !important;
+}
+
+html.dark-mode .research-item summary,
+html.dark-mode .research-title {
+  color: var(--ctg-text) !important;
+}
+
+html.dark-mode .research-item p {
+  color: var(--ctg-text-muted) !important;
+}
+
+html.dark-mode .research-icon {
+  background: var(--ctg-brand-soft) !important;
+  color: var(--ctg-link) !important;
+}
+
+html.dark-mode .research-chevron {
+  color: var(--ctg-text-subtle) !important;
+}
+
+html.dark-mode .research-item[open] .research-chevron {
+  color: var(--ctg-link) !important;
 }

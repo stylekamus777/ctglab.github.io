@@ -2,15 +2,15 @@
 
 {{ partial "page-title.html" . }}
 
-{{ if .Site.Data.service.enable }}
+{{ if hugo.Data.service.enable }}
 {{ "<!-- Service Section Start -->" | safeHTML }}
 <section id="service-page" class="pages service-page">
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-6">
-				{{ with .Site.Data.service.title }}<h2 class="subtitle wow fadeInUp animated" data-wow-delay=".3s"
+				{{ with hugo.Data.service.title }}<h2 class="subtitle wow fadeInUp animated" data-wow-delay=".3s"
 					data-wow-duration="500ms">{{ . }}</h2>{{ end }}
-				{{ with .Site.Data.service.subtitle }}<p class="subtitle-des wow fadeInUp animated" data-wow-delay=".5s"
+				{{ with hugo.Data.service.subtitle }}<p class="subtitle-des wow fadeInUp animated" data-wow-delay=".5s"
 					data-wow-duration="500ms">{{ . }}</p>{{ end }}
 			</div>
 		</div>
@@ -18,7 +18,7 @@
 			<div class="col-lg-6 order-2 order-lg-1">
 				<div class="block">
 					<div class="row service-parts">
-						{{ range .Site.Data.service.serviceItem }}
+						{{ range hugo.Data.service.serviceItem }}
 						<div class="col-md-6">
 							<div class="block wow fadeInUp animated" data-wow-duration="400ms" data-wow-delay="600ms">
 								{{ with .icon }}<i class="{{ . }}"></i>{{ end }}
@@ -30,7 +30,7 @@
 					</div>
 				</div>
 			</div>
-			{{ with .Site.Data.service.image }}
+			{{ with hugo.Data.service.image }}
 			<div class="col-lg-6 order-1 order-lg-2">
 				<div class="block">
 					<img class="img-fluid" src="{{ . | absURL }}" alt="about-image">

@@ -5,7 +5,7 @@
 <section id="gallery" class="gallery">
   <div class="container">
     <div class="row">
-      {{ range $index, $element := .Site.Data.gallery.galleryImages }}
+      {{ range $index, $element := hugo.Data.gallery.galleryImages }}
       <div class="col-md-4 col-sm-6">
         {{ $delay := mul $index 300 }}
         <figure class="wow fadeInLeft animated portfolio-item animated" data-wow-duration="500ms"

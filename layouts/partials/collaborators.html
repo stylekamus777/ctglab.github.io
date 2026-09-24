@@ -1,13 +1,13 @@
 
-{{ if .Site.Data.collaborators.enable }}
+{{ if hugo.Data.collaborators.enable }}
 {{ "<!-- collaborators Section Start -->" | safeHTML }}
 <section id="collaborators">
 	<div class="container" style="margin-bottom: 50px;">
 		<div class="row">
 			<div class="col-lg-12">
-				{{ with .Site.Data.collaborators.title }}<h2 class="subtitle-former text-center">{{ . }}</h2>{{ end }}
+				{{ with hugo.Data.collaborators.title }}<h2 class="subtitle-former text-center">{{ . }}</h2>{{ end }}
 			</div>
-			{{ range $index, $element:= .Site.Data.collaborators.members }}
+			{{ range $index, $element:= hugo.Data.collaborators.members }}
 			<div class="col-md-3 col-sm-6">
 				{{ $delay := mul $index 300 }}
 				<div class="team-member wow fadeInLeft" data-wow-duration="500ms" data-wow-delay="{{ $delay }}ms">

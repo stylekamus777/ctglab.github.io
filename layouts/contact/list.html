@@ -2,49 +2,14 @@
 
 {{ partial "page-title.html" . }}
 
-{{ if .Site.Data.contact.enable }}
+{{ if hugo.Data.contact.enable }}
 {{ "<!-- Contact Section Start -->" | safeHTML }}
 <section id="contact-section">
   <div class="container">
     <div class="row">
       <div class="col">
         <div class="block">
-          <div class="row address-details">
-            <div class="col-lg-3 col-sm-6 mb-4 d-flex">
-              <div class="address contact-card w-100 wow fadeInLeft" data-wow-duration="500ms" data-wow-delay=".3s">
-                <i class="ion-ios-location-outline"></i>
-                <h6 class="contact-card-title">Pisa Office</h6>
-                {{ with .Site.Data.contact.officeAddress1 }}<p class="contact-card-text">{{ . }}</p>{{ end }}
-              </div>
-            </div>
-            <div class="col-lg-3 col-sm-6 mb-4 d-flex">
-              <div class="address contact-card w-100 wow fadeInLeft" data-wow-duration="500ms" data-wow-delay=".5s">
-                <i class="ion-ios-location-outline"></i>
-                <h6 class="contact-card-title">Siena Office</h6>
-                {{ with .Site.Data.contact.officeAddress2 }}<p class="contact-card-text">{{ . }}</p>{{ end }}
-              </div>
-            </div>
-            <div class="col-lg-3 col-sm-6 mb-4 d-flex">
-              <div class="email contact-card w-100 wow fadeInLeft" data-wow-duration="500ms" data-wow-delay=".7s">
-                <i class="ion-ios-email-outline"></i>
-                <h6 class="contact-card-title">Email Us</h6>
-                <p class="contact-card-text">
-                  {{ with .Site.Data.contact.mail1 }}<span>{{ . }}</span>{{ end }}
-                  {{ with .Site.Data.contact.mail2 }}<br><span>{{ . }}</span>{{ end }}
-                </p>
-              </div>
-            </div>
-            <div class="col-lg-3 col-sm-6 mb-4 d-flex">
-              <div class="phone contact-card w-100 wow fadeInLeft" data-wow-duration="500ms" data-wow-delay=".9s">
-                <i class="ion-ios-telephone-outline"></i>
-                <h6 class="contact-card-title">Call Us</h6>
-                <p class="contact-card-text">
-                  {{ with .Site.Data.contact.phone1 }}<span>{{ . }}</span>{{ end }}
-                  {{ with .Site.Data.contact.phone2 }}<br><span>{{ . }}</span>{{ end }}
-                </p>
-              </div>
-            </div>
-          </div>
+          {{ partial "contact-cards.html" . }}
         </div>
       </div>
     </div>

@@ -1,49 +1,16 @@
 <!DOCTYPE html>
-<html lang="{{ .Site.LanguageCode | default "en" }}">
-  <head>
-    <meta name="color-scheme" content="light dark">
-    <!-- Anti Flash DarkMode -->
-    <style>
-     :root.dark-mode,
-     html.dark-mode,
-     html.dark-mode body {
-     background-color: #0d0b12 !important;
-     color: #edeaf2 !important;
-     }
-     html.dark-mode {
-     color-scheme: dark;
-     }
-    </style>
+<html lang="{{ with .Language.Locale }}{{ . }}{{ else }}en-US{{ end }}">
+{{- partial "head.html" . -}}
 
-    <script>
-      (function() {
-        var savedTheme = localStorage.getItem("theme");
-        var prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+<body>
+  <script>
+    if (document.documentElement.classList.contains("dark-mode")) {
+      document.body.classList.add("dark-mode");
+    }
+  </script>
+  {{- partial "header.html" . -}}
+  {{- block "main" . }}{{- end }}
+  {{- partial "footer.html" . -}}
+</body>
 
-        if (savedTheme === "dark" || (!savedTheme && prefersDark)) {
-          document.documentElement.classList.add("dark-mode");
-        } else if (savedTheme === "light") {
-          document.documentElement.classList.remove("dark-mode");
-        }
-      })();
-    </script>
-
-    {{ partial "head.html" . }}
-  </head>
-
-  <body id="body">
-    <script>
-      if (document.documentElement.classList.contains("dark-mode")) {
-        document.body.classList.add("dark-mode");
-      }
-    </script>
-
-    {{ partial "header.html" . }}
-
-    <main>
-      {{ block "main" . }}{{ end }}
-    </main>
-
-    {{ partial "footer.html" . }}
-  </body>
 </html>
