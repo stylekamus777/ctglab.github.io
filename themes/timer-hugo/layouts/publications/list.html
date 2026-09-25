@@ -1,0 +1,45 @@
+{{ define "main" }}
+
+{{ partial "page-title.html" . }}
+
+<section id="blog-full-width">
+	<div class="container">
+		{{ range .Data.Pages }}
+		<div class="row">
+			<div class="col wow fadeInLeft">
+				<a href="{{ .Params.doi }}">
+					{{ with .Params.image }}<img class="img-fluid" src="{{ . | absURL }}" alt="post-image" />{{ end }}
+				</a>
+			</div>
+			<div class="col-8" >	
+				<article class="wow fadeInDown" data-wow-delay=".3s" data-wow-duration="500ms">
+					
+					<div class="blog-content">
+						<div class="blog-meta">
+							{{ with .Params.author }}
+								{{ . }}
+							{{ end }}
+						</div>
+						<h2 class="blogpost-title">
+							<a href="{{ .Params.doi }}">{{ .Title }}</a>
+						</h2>
+						<div class="blog-meta">
+							{{ with .Params.journal }}
+								{{ . }}
+							{{ end }}
+						</div>
+
+						{{ with .Params.doi }}<a href="{{ . }}" class="btn btn-dafault btn-details hvr-bounce-to-right">Continue
+							Reading</a>{{ end }}
+						{{ with .Params.supplementary }}<a href="{{ . }}" class="btn btn-dafault btn-details hvr-bounce-to-right">Supplementary Files</a>{{ end }}
+					</div>
+				</article>
+			</div>
+		</div>
+		{{ end }}
+	</div>
+</section>
+
+{{ partial "cta.html" . }}
+
+{{ end }}

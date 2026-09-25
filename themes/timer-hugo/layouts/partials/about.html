@@ -1,0 +1,23 @@
+{{ if .Site.Params.about.enable }}
+{{ "<!-- About Section Start -->" | safeHTML }}
+<section id="about">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="block wow fadeInLeft" data-wow-delay=".3s" data-wow-duration="500ms">
+					{{ with .Site.Params.about.title }}<h2 style="text-align: center;">{{ . }}</h2>{{ end }}
+					{{ with .Site.Params.about.content }}<p>{{ . | safeHTML }}</p>{{ end }}
+					<ul style="color: #727272; font-size: 16px; line-height: 28px; margin-bottom: 35px; font-weight: 300;">Main interests rely on:
+						<li style="margin-left: 50px; list-style-type: circle;">the development of computational methods for the identification and characterization of germline and somatic structural variants, such as DNA copy-number alteration</li>
+						<li style="margin-left: 50px; list-style-type: circle;">the investigation of the functional impact of non-coding copy-number variants in neurodevelopmental disorders</li>
+						<li style="margin-left: 50px; list-style-type: circle;">the study of patient-specific tumor heterogeneity by combining multi-omics and clinical data to identify novel patient subgroups for tailored therapy and monitoring</li>
+						<li style="margin-left: 50px; list-style-type: circle;">the investigation of cancer-associated molecular mechanisms, in particular microRNAs and their regulatory networks</li>
+						<li style="margin-left: 50px; list-style-type: circle;">the identification of non-invasive biomarkers for diagnostics, therapeutic monitoring and drug resistance</li>
+					</ul>	
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+{{ "<!-- About Section End -->" | safeHTML }}
+{{ end }}

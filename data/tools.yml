@@ -1,0 +1,50 @@
+enable : true
+title : Tools
+tools :
+  - name: EXCAVATOR2
+    url: https://github.com/ctglab/excavator2 
+    image : https://opengraph.githubassets.com/25425/ctglab/excavator2
+    description : EXCAVATOR2 is a read count based tool that exploits all the reads produced by WES experiments to detect CNVs with a genome-wide resolution.
+    paper: https://doi.org/10.1093/nar/gkw695 
+    main_dev_pic: https://avatars.githubusercontent.com/u/107183475?v=4
+    main_dev_profile: https://github.com/ctglab 
+  
+  - name : ENEO
+    url : https://github.com/ctglab/ENEO
+    image : https://opengraph.githubassets.com/25425/ctglab/ENEO
+    description : ENEO is a Snakemake workflow to identify candidate tumor neoantigens from tumor-only RNA-seq data.
+    paper : https://www.biorxiv.org/content/10.1101/2024.08.08.607127v1
+    main_dev_pic : https://avatars.githubusercontent.com/u/36413174?s=64&v=4
+    main_dev_profile: https://github.com/danilotat
+  
+  - name: Isoworm
+    url: https://github.com/ctglab/isoworm
+    image: https://opengraph.githubassets.com/25425/ctglab/isoworm
+    description: Isoworm is a Snakemake workflow to quantify isoforms expression levels in large RNA-seq datasets and find poly-A sites.
+    paper: ""
+    main_dev_pic: https://avatars.githubusercontent.com/u/91120937?s=64&v=4
+    main_dev_profile: https://github.com/mspodda
+  
+  - name: ReViewCNV
+    url: https://github.com/ctglab/ReViewCNV
+    image: https://opengraph.githubassets.com/25425/ctglab/ReViewCNV
+    description: ReViewCNV is a containerized Shiny App for the visualization of germinal Copy Number Variants (CNVs) from any bioinformatic tool.
+    paper: ""
+    main_dev_pic: https://avatars.githubusercontent.com/u/110105172?s=64&v=4
+    main_dev_profile: https://github.com/Francesco85P
+  
+  - name: miXer
+    url: https://github.com/ctglab/miXer
+    image: https://opengraph.githubassets.com/25425/ctglab/miXer
+    description: miXer is a Machine-Learning-based CNV caller for exome sequencing data that leverages X-chromosome exome reads.
+    paper: ""
+    main_dev_pic: https://avatars.githubusercontent.com/u/7213308?v=4&size=64
+    main_dev_profile: https://github.com/fhgre
+
+  - name: QKomics
+    url: https://github.com/ctglab/QKomics 
+    image: https://opengraph.githubassets.com/25425/ctglab/QKomics
+    description: QKomics is a tool for stratification of tumour samples from molecular descriptors (gene expression and copy number alteration) with quantum Kernels.
+    paper: ""
+    main_dev_pic: https://avatars.githubusercontent.com/u/115460671?v=4
+    main_dev_profile: https://github.com/repettovaleria 

@@ -1,0 +1,42 @@
+enable: true
+title: Projects and Funded Activities
+projects:
+  - name: "TRANSCAN-3 JTC2024 — SeqPerGlio"
+    years: "2025-2028"
+    programme: "H2020"
+    description: "Intraoperative tumour sequencing for personalized loco-regional drug combination therapy against glioblastoma recurrences"
+    period: "10/2025 – 9/2028"
+    role: "Partner 2 Coordinator"
+    collaborators: []
+
+  - name: "Computational Methods for Third Generation Cancer Genomics"
+    years: "2023-2026"
+    programme: "PRIN 2022"
+    description: ""
+    period: "8/2023 – 2/2026"
+    role: "Unit Coordinator"
+    collaborators: []
+
+  - name: "CRC SCREEN"
+    years: "2022-2025"
+    programme: "Bando Ricerca Salute 2018, Regione Toscana"
+    description: "ColoReCtal cancer SCREENing: focus on omics biomarkers on liquid biopsy and urine"
+    period: "2022 – 2025"
+    role: "Unit Coordinator"
+    collaborators: []
+
+  - name: "SI-Markers"
+    years: "2022-2024"
+    programme: "Grant by Regione Toscana"
+    description: "Un nuovo modulo di SInLAB basato su AI a supporto del medico per la predizione del decorso clinico nei pazienti di Sclerosi Multipla"
+    period: "2022 – 2024"
+    role: "Project Coordinator"
+    collaborators: []
+
+  - name: "Rare Cancers Genomics"
+    years: "2020-2022"
+    programme: "Grant by First Health Pharmaceuticals B.V. (The Netherlands)"
+    description: ""
+    period: "2020 – 2022"
+    role: "Project Coordinator"
+    collaborators: []

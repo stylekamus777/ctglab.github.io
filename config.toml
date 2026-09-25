@@ -1,0 +1,56 @@
+baseURL = "https://ctglab.github.io/"
+locale = "en-us"
+title = "CTGLab - Computational Genomics Lab"
+theme = "timer-hugo"
+
+# We Used Ionicons Icon font for Icon, for more details check this link - https://ionicons.com/
+
+# Navbar Menus
+[[menu.main]]
+name    = "Home"
+url     = "/"
+weight  = 1
+[[menu.main]]
+name    = "Publications"
+url     = "publications"
+weight  = 2
+[[menu.main]]
+name    = "Projects"
+url     = "projects"
+weight  = 3
+[[menu.main]]
+name = "Tools"
+url = "tools"
+weight = 4
+[[menu.main]]
+name    = "News"
+url     = "news"
+weight = 5
+[[menu.main]]
+name    = "Contacts"
+url     = "contact"
+weight  = 6
+
+# Site Params
+[params]
+home = "Home"
+logo = "images/resized_logo.png"
+description = "CTGLab (Computational and Translational Genomics Laboratory) develops computational tools and analyses for precision medicine and cancer genomics."
+
+# Banner Section
+[params.banner]
+enable  = true
+bgImage = "images/banner2.jpg"
+heading = "CTGLab"
+description = "Computational and Translational Genomics Laboratory"
+# button
+btn     = false
+btnText = "Download More"
+btnURL  = "https://themefisher.com/"
+
+
+# Homepage About Section
+[params.about]
+enable  = true
+title   = "Our lab"
+content = "CTGLab develops innovative computational solutions and analytical frameworks to transform multi-omics and clinical data into actionable insights for Precision Medicine. Our multidisciplinary approach integrates mathematics, statistics, machine learning, and computer science to decode the complexity of cancer biology and advance personalized therapeutic strategies"

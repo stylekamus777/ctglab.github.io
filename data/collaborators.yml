@@ -1,0 +1,58 @@
+enable  : true
+title   : COLLABORATORS
+members  :
+  - name  : Barbara Iadarola, PhD
+    image : images/team/Barbara.jpg
+    designation : 
+    description : Bioinformatician, Siena Imaging 
+    twitter     : https://www.twitter.com
+    linkedIn    : https://www.linkedin.com/in/barbara-iadarola/
+    googleplus  : https://github.com/biadarola
+
+  - name  : Giulia Brunelli, PhD
+    image : images/team/giulia.jpg
+    designation : Statistician,Cogitars GmbH
+    description : 
+    twitter     : https://www.twitter.com
+    linkedIn    : https://linkedin.com/in/brunelli-giulia-157044114
+    googleplus  : https://github.com
+
+  - name  : Maurizio Podda, PhD
+    image : images/team/maurizio.jpg
+    designation : Bioinformatician, IFC-CNR
+    description :  
+    twitter     : https://www.twitter.com
+    linkedIn    : https://www.linkedin.com
+    googleplus  : https://github.com/mspodda
+  
+  - name  : Mohamad Elrifai
+    image : images/team/mohamad.jpg
+    designation : Pharmacist, Post graduate Fellowship
+    description : 
+    twitter     : https://www.twitter.com
+    linkedIn    : https://linkedin.com/in/mohamad-elrifai-987470202
+    googleplus  : https://github.com/mohamadelrifai
+
+  - name  : Elia Ceroni, PhD
+    image : images/team/elia.jpg
+    designation : IT engineer, Research Fellow
+    description : 
+    twitter     : https://www.twitter.com
+    linkedIn    : https://linkedin.com/in/elia-giuseppe-ceroni-9941aa15b
+    googleplus  : https://github.com/fhgre
+
+  - name  : Francesco Paparazzo, PhD
+    image : images/team/fra.jpg
+    designation : Biologist, Research Fellow
+    description : 
+    twitter     : https://www.twitter.com
+    linkedIn    : https://www.linkedin.com/in/francesco-paparazzo/
+    googleplus  : https://github.com/Francesco85P
+
+  - name  : Danilo Tatoni
+    image : images/team/danilo.png
+    designation : Biotechnologist, PhD Student
+    description : 
+    twitter     : https://www.x.com/danilotat
+    linkedIn    : https://linkedin.com/in/danilo-tatoni-903b18a6
+    googleplus  : https://github.com/danilotat

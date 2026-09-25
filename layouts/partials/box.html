@@ -1,0 +1,16 @@
+<section class="news-list">
+    <div class="container">
+        <div class="news-list-items">
+            {{ range $index, $page := sort .Data.Pages "Params.eventDate" "desc" }}
+            <article class="news-card">
+                <img class="news-card-image" src="{{ .Params.image | absURL }}" alt="{{ $page.Title }}">
+                <div class="news-card-content">
+                    <h3 class="news-card-title">{{ .Title }}</h3>
+                    <p class="news-card-meta">{{ .Params.With }} <span>/</span> {{ .Params.eventDate }}</p>
+                    <p class="news-card-excerpt">{{ .Summary }}</p>
+                </div>
+            </article>
+            {{ end }}
+        </div>
+    </div>
+</section>

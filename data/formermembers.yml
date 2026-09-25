@@ -1,0 +1,22 @@
+enable  : true
+title   : FORMER TEAM MEMBERS
+members  :
+
+  - name  : Orazio Catona
+    image : images/team/orazio.png
+    designation : Biotechnologist, Post Graduate Scholarship
+    description : 
+    twitter     : https://www.twitter.com
+    linkedIn    : https://www.linkedin.com/in/orazio-catona
+    googleplus  : https://github.com/Catona 
+
+  - name  : Nicoletta Di Giorgi
+    image : images/team/nicoletta.jpg
+    designation : Post Graduate Scholarship
+    description : 
+    twitter     : https://www.twitter.com
+    linkedIn    : https://linkedin.com/in/nicoletta-di-giorgi-054071158
+    googleplus  : https://github.com
+    
+
+

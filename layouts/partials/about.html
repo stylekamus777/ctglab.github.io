@@ -1,0 +1,92 @@
+{{ if .Site.Params.about.enable }}
+{{ "<!-- About Section Start -->" | safeHTML }}
+<section id="about">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="block wow fadeInLeft" data-wow-delay=".3s" data-wow-duration="500ms">
+					{{ with .Site.Params.about.title }}<h2 class="section-title-center">{{ . }}</h2>{{ end }}
+					{{ with .Site.Params.about.content }}<p>{{ . | safeHTML }}</p>{{ end }}
+					<h2 class="section-title-center">Main research areas</h2>
+					<div class="research-grid">
+						<details class="research-item">
+							<summary>
+								<span class="research-icon">
+									<img src="/images/icons/chromosome-svgrepo-com.svg" width="30" height="30" alt="Double helix icon">
+								</span>
+								<span class="research-title">Structural variant detection and characterization</span>
+								<span class="research-chevron">
+									<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+								</span>
+							</summary>
+							<p>Development of algorithms for identifying germline and somatic genomic alterations from next-generation and long-read sequencing data, including copy number variants, structural rearrangements, and clonality analysis</p>
+						</details>
+						<details class="research-item">
+							<summary>
+								<span class="research-icon">
+									<img src="images/icons/genetic-engineering-svgrepo-com.svg" width="30" height="30" alt="Gene network icon">
+								</span>
+								<span class="research-title">Gene regulatory network inference</span>
+								<span class="research-chevron">
+									<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+								</span>
+							</summary>
+							<p>Investigating enhancer-promoter interactions, transcription factor networks, and chromatin accessibility landscapes that govern cell state transitions in cancer and neurodevelopmental disorders</p>
+						</details>
+						<details class="research-item">
+							<summary>
+								<span class="research-icon">
+									<img src="images/icons/gene-sequence-svgrepo-com.svg" width="30" height="30" alt="Spatial heterogeneity icon">
+								</span>
+								<span class="research-title">Tumor heterogeneity and spatial genomics</span>
+								<span class="research-chevron">
+									<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+								</span>
+							</summary>
+							<p>Integrating single-cell and spatial multi-omics profiling to dissect patient-specific cellular diversity, microenvironmental interactions, and therapy resistance mechanisms</p>
+						</details>
+						<details class="research-item">
+							<summary>
+								<span class="research-icon">
+									<img src="images/icons/genetic-data-svgrepo-com.svg" width="30" height="30" alt="Quantum icon">
+								</span>
+								<span class="research-title">Emerging technologies for precision oncology</span>
+								<span class="research-chevron">
+									<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+								</span>
+							</summary>
+							<p>Pioneering applications of Oxford Nanopore long-read sequencing for real-time genomic and epigenomic profiling, and exploring quantum machine learning approaches for high-dimensional omics data analysis</p>
+						</details>
+						<details class="research-item">
+							<summary>
+								<span class="research-icon">
+									<img src="images/icons/gene-sequencing-svgrepo-com.svg" width="30" height="30" alt="Biomarkers icon">
+								</span>
+								<span class="research-title">Translational biomarker discovery</span>
+								<span class="research-chevron">
+									<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+								</span>
+							</summary>
+							<p>Identifying non-invasive molecular signatures from liquid biopsy and tissue samples for cancer diagnosis, therapeutic monitoring, patient stratification, and treatment response prediction</p>
+						</details>
+						<details class="research-item">
+							<summary>
+								<span class="research-icon">
+									<img src="images/icons/genetic-algorithm-svgrepo-com.svg" width="30" height="30" alt="Multiomics icon">
+								</span>
+								<span class="research-title">Multi-omics data integration</span>
+								<span class="research-chevron">
+									<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+								</span>
+							</summary>
+							<p>Creating computational pipelines that combine genomic, transcriptomic, epigenomic, and medical imaging data with clinical information to enable personalized cancer care</p>
+						</details>
+					</div>
+				</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+{{ "<!-- About Section End -->" | safeHTML }}
+{{ end }}

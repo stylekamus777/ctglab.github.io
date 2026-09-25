@@ -1,0 +1,57 @@
+
+{{ define "main" }}
+
+<section class="global-page-header">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="block">
+					<h2>{{ .Title }}</h2>
+					<div class="portfolio-meta">
+						<span> Tags:
+							{{ if ne .Params.tags nil }}{{ delimit .Params.tags ", " }}{{ end }}
+						</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="single-post">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				{{ with .Params.image }}
+				<div class="post-img">
+					<img class="img-fluid" alt="" src="{{ . | absURL }}">
+				</div>
+				{{ end }}
+				<div class="post-content">
+					{{ .Content }}
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<section class="clients">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<h2 class="subtitle text-center wow fadeInUp" data-wow-delay=".3s" data-wow-duration="500ms">In collaboration with:</h2>
+				<div class="clients-logo-row">
+						{{ range .Params.collaborations}}
+						<div class="clients-logo-item">
+							<img src="{{ .image | absURL }}" width="200" height="100">
+						</div>
+						{{ end }}
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+{{ partial "cta.html" . }}
+
+{{ end }}

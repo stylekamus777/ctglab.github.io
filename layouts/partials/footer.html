@@ -1,0 +1,54 @@
+<footer id="footer">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-8 col-sm-12">
+        <div class="copyright">
+          <p>
+            Copyright {{ now.Format "2006" }}
+            {{ with .Site.Params.copyright }}
+              {{ . | markdownify }}
+            {{ else }}
+              {{ .Site.Title }}. Based on theme developed by <a href="https://themefisher.com" target="_blank" rel="noopener">Themefisher</a>.<br>
+              Visit their store for bootstrap themes: <a href="https://themefisher.com" target="_blank" rel="noopener">Store</a>
+            {{ end }}
+          </p>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-12">
+        <ul class="social">
+          {{ range .Site.Params.footer.social }}
+            <li>
+              <a href="{{ .link | safeURL }}" target="_blank" rel="noopener" aria-label="{{ .name }}">
+                <i class="{{ .icon }}"></i>
+              </a>
+            </li>
+          {{ end }}
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<button id="back-to-top" class="back-to-top" title="Volver arriba" aria-label="Volver arriba">
+  <i class="ion-chevron-up"></i>
+</button>
+
+<script>
+  const backToTopBtn = document.getElementById("back-to-top");
+  if (backToTopBtn) {
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 300) {
+        backToTopBtn.classList.add("show");
+      } else {
+        backToTopBtn.classList.remove("show");
+      }
+    });
+
+    backToTopBtn.addEventListener("click", () => {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+    });
+  }
+</script>

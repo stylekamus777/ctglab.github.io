@@ -1,0 +1,27 @@
+{{ define "main" }}
+
+{{ partial "page-title.html" . }}
+
+{{ if hugo.Data.contact.enable }}
+{{ "<!-- Contact Section Start -->" | safeHTML }}
+<section id="contact-section">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <div class="block">
+          {{ partial "contact-cards.html" . }}
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      {{ partial "maps.html" . }}
+    </div>
+
+  </div>
+</section>
+{{ "<!-- Contact Section End -->" | safeHTML }}
+{{ end }}
+
+{{ partial "cta.html" . }}
+
+{{ end }}

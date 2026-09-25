@@ -1,0 +1,126 @@
+/* Estilos propios del sitio CTGLab, fuera del tema base */
+
+/* Cuadrícula "Main research areas" (home, sección About) */
+.research-grid {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	align-items: start;
+	gap: 16px;
+	margin-bottom: 0;
+}
+@media (max-width: 768px) {
+	.research-grid {
+		grid-template-columns: 1fr;
+	}
+}
+.research-item {
+	background: #ffffff;
+	border: 1px solid #e5e7eb;
+	border-radius: 12px;
+	padding: 0;
+	color: #4b5563;
+	font-size: 15px;
+	line-height: 1.6;
+	font-weight: 400;
+	cursor: pointer;
+	transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+	overflow: hidden;
+}
+.research-item:hover {
+	border-color: rgba(47, 75, 255, 0.3);
+	box-shadow: 0 4px 16px rgba(47, 75, 255, 0.1);
+	transform: translateY(-2px);
+}
+.research-item summary {
+	font-weight: 500;
+	color: #1f2937;
+	list-style: none;
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	padding: 18px 20px;
+	transition: background 0.2s;
+}
+.research-item summary:hover {
+	background: #f5f7ff;
+}
+.research-item summary::-webkit-details-marker {
+	display: none;
+}
+.research-icon {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 36px;
+	height: 36px;
+	border-radius: 8px;
+	background: linear-gradient(135deg, #e8edff, #dde3f7);
+	color: #2F4BFF;
+	flex-shrink: 0;
+}
+.research-title {
+	flex: 1;
+	font-size: 15px;
+	font-weight: 600;
+	letter-spacing: -0.01em;
+}
+.research-chevron {
+	display: flex;
+	align-items: center;
+	color: #9ca3af;
+	transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+	flex-shrink: 0;
+}
+.research-item[open] .research-chevron {
+	transform: rotate(180deg);
+	color: #2F4BFF;
+}
+.research-item p {
+	margin: 0;
+	padding: 4px 20px 0px 20px;
+	color: #6b7280;
+	font-size: 14px;
+	line-height: 1.65;
+	animation: researchSlideDown 0.3s ease-out;
+}
+@keyframes researchSlideDown {
+	from {
+		opacity: 0;
+		transform: translateY(-6px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+/* Utilidades de espaciado reutilizables, en vez de style="margin-top/bottom" repetido inline */
+.section-title-center {
+	text-align: center;
+}
+.section-spacing-top {
+	margin-top: 20px;
+}
+.section-spacing-bottom {
+	margin-bottom: 50px;
+}
+
+/* Fila de logos "In collaboration with" (antes: owl-carousel sin plugin cargado) */
+.clients-logo-row {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	gap: 30px;
+	margin-top: 20px;
+}
+.clients-logo-item img {
+	max-width: 200px;
+	height: auto;
+}
+
+/* Descripción de cada herramienta en /tools/ (antes: div.p con color inline) */
+.tool-description {
+	color: #3c4043;
+}

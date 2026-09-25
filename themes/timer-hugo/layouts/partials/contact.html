@@ -1,0 +1,58 @@
+{{ if .Site.Data.contact.enable }}
+{{ "<!-- Contact Section Start -->" | safeHTML }}
+<section id="contact-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="map-area">
+          {{ with .Site.Data.contact.mapTitle }}<h2 style="text-align: center;" class="subtitle  wow fadeInDown" data-wow-duration="500ms"
+            data-wow-delay=".3s">{{ . }}</h2>{{ end }}
+			<!--{{ with .Site.Data.contact.mapSubtitle }}<p style="text-align: center;" class="subtitle-des wow fadeInDown" data-wow-duration="500ms"
+            data-wow-delay=".5s">{{ . }}</p>{{ end }} -->
+        </div>
+      </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11534.52037925938!2d10.4248623!3d43.7182358!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x946da063f970ba06!2sIIT-CNR%20Istituto%20di%20Informatica%20e%20Telematica!5e0!3m2!1sit!2sit!4v1642584698845!5m2!1sit!2sit"
+                    width="100%" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>
+        </div>
+        <div class="col-md-6">
+            <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11608.16889509369!2d11.3037129!3d43.3343055!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x6e5e4e87e639be7b!2sFondazione%20Toscana%20Life%20Sciences!5e0!3m2!1sit!2sit!4v1642502632817!5m2!1sit!2sit"
+                    width="100%" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>
+        </div>
+    </div>
+    <div class="row address-details">
+      <div class="col-lg-3 col-sm-6">
+        <div class="address wow fadeInLeft" data-wow-duration="500ms" data-wow-delay=".3s">
+          <i class="ion-ios-location-outline"></i>
+          {{ with .Site.Data.contact.officeAddress1 }}<h5>{{ . }}</h5>{{ end }}
+        </div>
+      </div>
+      <div class="col-lg-3 col-sm-6">
+        <div class="address wow fadeInLeft" data-wow-duration="500ms" data-wow-delay=".5s">
+          <i class="ion-ios-location-outline"></i>
+          {{ with .Site.Data.contact.officeAddress2 }}<h5>{{ . }}</h5>{{ end }}
+        </div>
+      </div>
+      <div class="col-lg-3 col-sm-6">
+        <div class="email wow fadeInLeft" data-wow-duration="500ms" data-wow-delay=".7s">
+          <i class="ion-ios-email-outline"></i>
+          <p style="font-family: GeosansLight;">{{ with .Site.Data.contact.mail1 }}{{ . }}{{ end }}
+            <br>{{ with .Site.Data.contact.mail2 }}{{ . }}{{ end }}</p>
+        </div>
+      </div>
+      <div class="col-lg-3 col-sm-6">
+        <div class="phone wow fadeInLeft" data-wow-duration="500ms" data-wow-delay=".9s">
+          <i class="ion-ios-telephone-outline"></i>
+          <p style="font-family: GeosansLight;">{{ with .Site.Data.contact.phone1 }}{{ . }}{{ end }}
+            <br>{{ with .Site.Data.contact.phone2 }}{{ . }}{{ end }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{{ "<!-- Contact Section End -->" | safeHTML }}
+{{ end }}

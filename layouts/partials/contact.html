@@ -1,0 +1,22 @@
+{{ if hugo.Data.contact.enable }}
+{{ "<!-- Contact Section Start -->" | safeHTML }}
+<section id="contact-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="map-area">
+          {{ with hugo.Data.contact.mapTitle }}<h2 style="text-align: center;" class="subtitle  wow fadeInDown" data-wow-duration="500ms"
+            data-wow-delay=".3s">{{ . }}</h2>{{ end }}
+          <!--{{ with hugo.Data.contact.mapSubtitle }}<p style="text-align: center;" class="subtitle-des wow fadeInDown" data-wow-duration="500ms"
+            data-wow-delay=".5s">{{ . }}</p>{{ end }} -->
+        </div>
+      </div>
+    </div>
+    
+    {{ partial "maps.html" . }}
+
+    {{ partial "contact-cards.html" . }}
+  </div>
+</section>
+{{ "<!-- Contact Section End -->" | safeHTML }}
+{{ end }}

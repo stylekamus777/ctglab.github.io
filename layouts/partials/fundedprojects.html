@@ -1,0 +1,192 @@
+{{ if hugo.Data.fundedprojects.enable }}
+{{ "<!-- Funded Projects Section Start -->" | safeHTML }}
+<section id="funded-projects">
+	<div class="container section-spacing-top">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="block wow fadeInLeft" data-wow-delay=".3s" data-wow-duration="500ms">
+					<div class="project-list">
+						{{ range hugo.Data.fundedprojects.projects }}
+						<details class="project-item">
+							<summary>
+								<span class="project-years">[{{ .years }}]</span>
+								<span class="project-title">{{ .name }}</span>
+								<span class="project-badge">{{ .programme }}</span>
+								<span class="project-chevron">
+									<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+								</span>
+							</summary>
+							<div class="project-details">
+								{{ with .description }}<p class="project-description">{{ . }}</p>{{ end }}
+								<div class="project-meta">
+									<span class="project-meta-item"><strong>Period:</strong> {{ .period }}</span>
+									<span class="project-meta-item"><strong>Role:</strong> {{ .role }}</span>
+								</div>
+								{{ if .collaborators }}{{ if gt (len .collaborators) 0 }}
+								<div class="project-collaborators">
+									<strong>Collaborators:</strong>
+									{{ delimit .collaborators ", " }}
+								</div>
+								{{ end }}{{ end }}
+							</div>
+						</details>
+						{{ end }}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<style>
+	.project-list {
+		display: flex;
+		flex-direction: column;
+		gap: 12px;
+		max-width: 900px;
+		margin: 0 auto;
+	}
+	.project-item {
+		background: #ffffff;
+		border: 1px solid #e5e7eb;
+		border-radius: 12px;
+		padding: 0;
+		color: #4b5563;
+		font-size: 15px;
+		line-height: 1.6;
+		cursor: pointer;
+		transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+		box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+		overflow: hidden;
+	}
+	.project-item:hover {
+		border-color: rgba(152, 36, 133, 0.3);
+		box-shadow: 0 4px 16px rgba(152, 36, 133, 0.1);
+		transform: translateY(-2px);
+	}
+	.project-item summary {
+		font-weight: 500;
+		color: #1f2937;
+		list-style: none;
+		display: flex;
+		align-items: center;
+		gap: 12px;
+		padding: 18px 20px;
+		transition: background 0.2s;
+	}
+	.project-item summary:hover {
+		background: #faf5fc;
+	}
+	.project-item summary::-webkit-details-marker {
+		display: none;
+	}
+	.project-years {
+		font-size: 14px;
+		font-weight: 700;
+		color: #982485;
+		white-space: nowrap;
+		flex-shrink: 0;
+	}
+	.project-title {
+		flex: 1;
+		font-size: 15px;
+		font-weight: 600;
+		letter-spacing: -0.01em;
+	}
+	.project-badge {
+		display: inline-flex;
+		align-items: center;
+		padding: 3px 10px;
+		border-radius: 20px;
+		background: linear-gradient(135deg, #f3e8ff, #ede4f7);
+		color: #982485;
+		font-size: 12px;
+		font-weight: 600;
+		white-space: nowrap;
+		flex-shrink: 0;
+	}
+	.project-chevron {
+		display: flex;
+		align-items: center;
+		color: #9ca3af;
+		transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+		flex-shrink: 0;
+	}
+	.project-item[open] .project-chevron {
+		transform: rotate(180deg);
+		color: #982485;
+	}
+	.project-details {
+		padding: 4px 20px 18px 20px;
+		animation: projectSlideDown 0.3s ease-out;
+	}
+	.project-description {
+		margin: 0 0 12px 0;
+		color: #6b7280;
+		font-size: 14px;
+		line-height: 1.65;
+	}
+	.project-meta {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 8px 20px;
+		font-size: 14px;
+		color: #4b5563;
+	}
+	.project-meta-item strong {
+		color: #1f2937;
+	}
+	.project-collaborators {
+		margin-top: 10px;
+		font-size: 14px;
+		color: #4b5563;
+	}
+	.project-collaborators strong {
+		color: #1f2937;
+	}
+	@media (max-width: 768px) {
+		.project-item summary {
+			flex-wrap: wrap;
+		}
+		.project-badge {
+			white-space: normal;
+			flex-shrink: 1;
+		}
+	}
+	@keyframes projectSlideDown {
+		from {
+			opacity: 0;
+			transform: translateY(-6px);
+		}
+		to {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
+	.github-cta {
+		text-align: center;
+		padding: 48px 0 20px 0;
+	}
+	.github-cta p {
+		font-size: 16px;
+		font-weight: 600;
+		color: #1f2937;
+		margin-bottom: 16px;
+	}
+	.github-cta a {
+		display: inline-block;
+		color: #4b5563;
+		transition: color 0.2s, transform 0.2s;
+	}
+	.github-cta a:hover {
+		color: #982485;
+		transform: scale(1.1);
+	}
+</style>
+<div class="github-cta">
+	<p>Explore our GitHub repository</p>
+	<a href="https://github.com/ctglab" target="_blank" rel="noopener">
+		<svg width="60" height="60" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+	</a>
+</div>
+{{ "<!-- Funded Projects Section End -->" | safeHTML }}
+{{ end }}

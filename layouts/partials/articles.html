@@ -1,0 +1,106 @@
+{{ $articles := os.ReadFile "content/publications/DOI_list.json" | transform.Unmarshal }}
+{{ $sortedArticles := sort $articles "year" "desc" }}
+
+
+<div class="container section-spacing-top">
+    {{ range $index, $article := $sortedArticles }}
+        <div class="publication-item">
+            <!-- Selected Badge (you'll add JavaScript to toggle this) -->
+            <div class="selected-badge" style="display: none;">
+                <svg class="checkmark" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                </svg>
+                SELECTED
+            </div>
+
+            <!-- Publication Type Badge -->
+            <div class="publication-type">{{ $article.article_type }}</div>
+
+            <!-- Publication Title -->
+            <h3 class="publication-title">{{ $article.title }}</h3>
+
+            <!-- Publication Metadata -->
+            <div class="publication-meta">
+                {{ $article.year }}
+                {{ if $article.journal }}
+                    <span class="separator">•</span>{{ $article.journal }}
+                {{ end }}
+                {{ if $article.volume }}
+                    <span class="separator">•</span>{{ $article.volume }}
+                {{ end }}
+                {{ if $article.pages }}
+                    :{{ $article.pages }}
+                {{ end }}
+                {{ if $article.publisher }}
+                    <span class="separator">•</span>{{ $article.publisher }}
+                {{ end }}
+            </div>
+
+            <!-- Authors -->
+            <div class="publication-authors">
+                <svg class="author-icon" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"/>
+                </svg>
+                {{ $authorCount := len $article.authors }}
+                {{ range $i, $author := $article.authors }}
+                    {{ if lt $i 3 }}
+                        <a href="#" class="author-link">{{ $author }}</a>
+                        {{ if and (lt $i 2) (lt (add $i 1) $authorCount) }}, {{ end }}
+                    {{ end }}
+                {{ end }}
+                {{ if gt $authorCount 3 }}
+                    ... <span class="author-more">{{ sub $authorCount 3 }} more</span>
+                {{ end }}
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="publication-actions">
+                {{ if $article.doi }}
+                    <a href="https://doi.org/{{ $article.doi }}" class="action-btn" target="_blank">
+                        <svg class="icon" fill="currentColor" viewBox="0 0 24 24" width="16" height="16">
+                            <path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6H6zm7 1.5L18.5 9H13V3.5zM8.5 13h1.2c.5 0 .9.1 1.1.4.3.2.4.6.4 1s-.1.8-.4 1c-.2.3-.6.4-1.1.4H9.2V17H8.5v-4zm.7.5v1.8h.5c.3 0 .6-.1.8-.3.2-.1.3-.4.3-.6 0-.3-.1-.5-.3-.6-.2-.2-.5-.3-.8-.3h-.5zm3.3-.5h1.3c.5 0 1 .2 1.3.5.3.3.5.8.5 1.5s-.2 1.2-.5 1.5c-.3.3-.8.5-1.3.5h-1.3v-4zm.7.6v2.9h.5c.4 0 .7-.1.9-.4.2-.2.3-.6.3-1 0-.5-.1-.8-.3-1.1-.2-.3-.5-.4-.9-.4h-.5zm3.8-.6h2v.5h-1.3v1.1h1.2v.5h-1.2V17H17v-4z"/>
+                        </svg>
+                        PDF
+                    </a>
+                {{ end }}
+
+                <button class="abstract-btn" type="button" onclick="toggleAbstract('abstract-{{ $index }}')">
+                    Show Abstract
+                </button>
+
+                {{ if $article.doi }}
+                    <a href="https://doi.org/{{ $article.doi }}" class="doi-link" target="_blank">
+                        <svg class="icon" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M12.586 4.586a2 2 0 112.828 2.828l-3 3a2 2 0 01-2.828 0 1 1 0 00-1.414 1.414 4 4 0 005.656 0l3-3a4 4 0 00-5.656-5.656l-1.5 1.5a1 1 0 101.414 1.414l1.5-1.5zm-5 5a2 2 0 012.828 0 1 1 0 101.414-1.414 4 4 0 00-5.656 0l-3 3a4 4 0 105.656 5.656l1.5-1.5a1 1 0 10-1.414-1.414l-1.5 1.5a2 2 0 11-2.828-2.828l3-3z" clip-rule="evenodd"/>
+                        </svg>
+                        {{ $article.doi }}
+                    </a>
+                {{ end }}
+            </div>
+
+            <!-- Collapsible Abstract -->
+            {{ if $article.abstract }}
+                <div id="abstract-{{ $index }}" class="abstract-content collapse">
+                    <p>{{ $article.abstract }}</p>
+                </div>
+            {{ end }}
+        </div>
+    {{ end }}
+</div>
+
+<script>
+function toggleAbstract(abstractId) {
+    const abstractDiv = document.getElementById(abstractId);
+    const button = event.target;
+    
+    if (abstractDiv.classList.contains('show')) {
+        abstractDiv.classList.remove('show');
+        abstractDiv.classList.add('collapse');
+        button.textContent = 'Show Abstract';
+    } else {
+        abstractDiv.classList.remove('collapse');
+        abstractDiv.classList.add('show');
+        button.textContent = 'Hide Abstract';
+    }
+}
+</script>

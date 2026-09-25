@@ -1,0 +1,41 @@
+enable  : true
+title   : THE TEAM
+members  :
+  - name  : Romina D'Aurizio, PhD
+    image : images/team/romina.jpg
+    designation : Mathematician, PI
+    description : 
+    twitter     : https://www.twitter.com
+    linkedIn    : https://linkedin.com/in/romina-d-aurizio-a43b0a56
+    googleplus  : https://github.com
+  
+  - name  : Valeria Repetto
+    image : images/team/valeria.png
+    designation : Physicist, PhD Student
+    description : 
+    twitter     : https://www.twitter.com
+    linkedIn    : https://linkedin.com/in/valeria-repetto-1395a1176
+    googleplus  : https://github.com
+
+  - name  : Tommaso Ducci 
+    image : images/team/tommaso.png
+    designation : Biomedical engineer, PhD Student
+    description : 
+    twitter     : https://www.twitter.com
+    linkedIn    : https://www.linkedin.com/in/tommaso-ducci-496a51278
+    googleplus  : https://github.com/TommasoDucci
+  
+  - name  : Manel Hmida 
+    image : images/team/manel.png
+    designation : Data Scientist, PhD Student
+    description : 
+    twitter     : https://www.twitter.com
+    linkedIn    : https://www.linkedin.com/in/manel-hmida-620a0912b/
+    googleplus  : https://github.com/Manel-Hmida232
+
+
+
+
+
+
+
