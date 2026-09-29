@@ -86,7 +86,7 @@
             "Giusti Betti",
             "D’Aurizio Romina"
         ],
-        "journal": "Oxford University Press (OUP)",
+        "journal": "Briefings in Bioinformatics, Volume 19, Issue 6",
         "year": 2017,
         "abstract": "",
         "article_type": "JOURNAL ARTICLE"
@@ -127,7 +127,7 @@
             "Pellegrini Marco",
             "Magi Alberto"
         ],
-        "journal": "Nucleic Acids Res",
+        "journal": "Nucleic Acids Research, Volume 44, Issue 20",
         "year": 2016,
         "abstract": "",
         "article_type": "JOURNAL ARTICLE"
@@ -843,7 +843,7 @@
             "Renieri Alessandra",
             "Ariani Francesca"
         ],
-        "journal": "Brazilian Journal of Psychiatry",
+        "journal": "Brazilian Journal of Psychiatry, Volume: 45, Issue: 1",
         "year": 2022,
         "abstract": "",
         "article_type": "JOURNAL ARTICLE"
@@ -900,7 +900,7 @@
             "Greene Catherine M.",
             "Poliseno Laura"
         ],
-        "journal": "Springer US",
+        "journal": "Springer US, Volume: 2265, Pages: 487-512",
         "year": 2021,
         "abstract": "",
         "article_type": "JOURNAL ARTICLE"
@@ -1052,10 +1052,10 @@
             "Leoncini M.",
             "Pellegrini M."
         ],
-        "journal": "ACM",
+        "journal": "ACM, Pages: 335-344",
         "year": 2015,
         "abstract": "",
-        "article_type": "JOURNAL ARTICLE"
+        "article_type": "CONFERENCE"
     },
     {
         "doi": "10.1101/2024.10.03.616449",
@@ -1105,7 +1105,7 @@
             "Romina D'Aurizio",
             "Laura Poliseno"
         ],
-        "journal": "Molecular Oncology",
+        "journal": "Molecular Oncology, Volume: 19, Issue: 9",
         "year": 2025,
         "abstract": "The BRAFV600E mutant kinase is widely studied as a cancer driver and therapeutic target. Here, we investigated how the annotation of the BRAF-reference (ref) and BRAF-X1 variants has evolved in public databases and addressed challenges posed by their discrimination and quantification from short-read sequencing. We built IsoWorm, a bioinformatic pipeline tailored to discriminate and quantify BRAF variants, and employed it to analyze > 600 cancer cell lines and > 1000 cancer tissue samples. Using FLIBase, we reanalyzed TCGA data from > 9000 cancer tissue samples. We consistently found that BRAF-X1 (now BRAF-204) is very abundant in human cancer and its expression is 1.5–75 times greater than that of BRAF-ref (now BRAF-220). Crucially, we identified KIRP-kidney renal papillary cell carcinoma as a cancer subtype in which a high BRAF-204/BRAF-220 ratio is an independent prognostic factor of poor outcome. Our in silico analyses establish BRAF as a mix of two protein-coding transcript variants, with BRAF-204 being more highly expressed than BRAF-220. These findings prompt us to undertake the systematic benchmarking of BRAF-204 against BRAF-220 in terms of molecular mechanisms, biological activities, druggability, and clinical relevance.",
         "article_type": "JOURNAL ARTICLE"
@@ -1146,9 +1146,10 @@
             "Renieri Alessandra",
             "Pinto Anna Maria"
         ],
-        "journal": "Eur J Hum Genet",
+        "journal": "European Journal of Human Genetics, Volume: 33, Pages: 461-467",
         "year": 2024,
-        "abstract": " Alport syndrome is a rare genetic kidney disease caused by variants in the COL4A3/A4/A5 genes. It’s characterised by progressive kidney failure, though therapies targeting Renin-Angiotensin System can delay its progression. Additionally, extrarenal manifestations may sometimes coexist. Recent advances in genetic analysis and the necessity to better clarify genotype-phenotype correlations in affected patients raises the importance of detecting even cryptic splicing variants, lying in both canonical and non-canonical splice sites variants such as last exonic nucleotide variants. These variants, often, do not cause an amino acid change but alter the snRNP proteins binding. We studied a big Italian family with Alport syndrome showing a clear dominant pattern of transmission with younger family members having only haematuria and older individuals presenting with End-Stage Kidney Failure (ESKF). Kidney biopsy showed the typical disease hallmarks. We deeply mined the data for SNV and CNV through exome sequencing on DNA from both peripheral blood samples and patients’ podocytes-lineage cells. We identified an already reported synonymous variant, c.765G>A (p.(Thr255Thr)), in the last exonic nucleotide of exon 13 of the COL4A3 gene. Employing the patient’s podocytes we demonstrated that this variant results in exon skipping leading to an in-frame deletion of 28 amino acids without leaky effect. According to the pattern of transmission, to the kidney biopsy and to the exome data analysis we provided further evidence that autosomal dominant Alport syndrome is a well-defined clinical entity. We also confirmed the pathogenicity of the synonymous COL4A3 variant for the first time demonstrating its role in a dominant pattern of transmission."
+        "abstract": " Alport syndrome is a rare genetic kidney disease caused by variants in the COL4A3/A4/A5 genes. It’s characterised by progressive kidney failure, though therapies targeting Renin-Angiotensin System can delay its progression. Additionally, extrarenal manifestations may sometimes coexist. Recent advances in genetic analysis and the necessity to better clarify genotype-phenotype correlations in affected patients raises the importance of detecting even cryptic splicing variants, lying in both canonical and non-canonical splice sites variants such as last exonic nucleotide variants. These variants, often, do not cause an amino acid change but alter the snRNP proteins binding. We studied a big Italian family with Alport syndrome showing a clear dominant pattern of transmission with younger family members having only haematuria and older individuals presenting with End-Stage Kidney Failure (ESKF). Kidney biopsy showed the typical disease hallmarks. We deeply mined the data for SNV and CNV through exome sequencing on DNA from both peripheral blood samples and patients’ podocytes-lineage cells. We identified an already reported synonymous variant, c.765G>A (p.(Thr255Thr)), in the last exonic nucleotide of exon 13 of the COL4A3 gene. Employing the patient’s podocytes we demonstrated that this variant results in exon skipping leading to an in-frame deletion of 28 amino acids without leaky effect. According to the pattern of transmission, to the kidney biopsy and to the exome data analysis we provided further evidence that autosomal dominant Alport syndrome is a well-defined clinical entity. We also confirmed the pathogenicity of the synonymous COL4A3 variant for the first time demonstrating its role in a dominant pattern of transmission.",
+        "article_type": "JOURNAL ARTICLE"
     },
     {
         "doi": "10.1038/s41598-025-09751-z",
@@ -1170,9 +1171,10 @@
             "Fallerini Chiara",
             "Renieri Alessandra"
         ],
-        "journal": "Sci Rep",
+        "journal": "Scientific Reports, Volume: 15, Article number: 25337",
         "year": 2025,
-        "abstract": ""
+        "abstract": "",
+        "article_type": "JOURNAL ARTICLE"
     },
     {
         "doi": "10.21203/rs.3.rs-7965791/v1",
@@ -1191,7 +1193,8 @@
         ],
         "journal": "Springer Science and Business Media LLC",
         "year": 2025,
-        "abstract": " Background: The integration of molecular profiling in the classification of gliomas is essential to inform on patients’ prognosis and guide treatment. Radiomics and Deep Learning (DL) algorithms proved cost-effective non-invasive alternatives to predict genetic alterations. However, these methodologies have limitations due to tumor heterogeneity, variability in imaging acquisition protocols, the use of tumor segmentation masks and the lack of external validation cohorts. In this study, we developed a DL-based methodology to achieve a robust molecular stratification of adult gliomas based on whole-brain 3D diagnostic, structural MRI scans. Methods: Pre-operative T1-weighted before and after gadolinium administration, T2-weighted and T2-weighted fluid-attenuated inversion recovery sequences and molecular information (IDH and 1p19q mutation status) of 870 gliomas across 14 centers were collected. Two independent DL models were implemented, optimized, and subsequently integrated into a tiered framework for classifying tumors as IDH-WT, IDH-mutant 1p/19q intact and IDH-mutant / 1p/19q co-deleted. The final classifier was tested on 227 patients across 4 centers, which were not included in the training phase. Results: In the external test set, the tiered model achieved an AUC of 0.93 [IDH-WT], 0.91 [IDH-mutant 1p/19q intact] and 0.89 [IDH-mutant 1p/19q co-deleted], improving on previous approaches. Generated attention maps of enhancing tumor regions identified IDH status; maps of non-enhancing regions distinguished 1p/19q intact from co-deleted tumors. Conclusions: We demonstrated that the tired DL model developed in this study is effective to stratify gliomas according to their IDH and 1p/19q status, relying on standard 3D MRI scans from multicenter validation cohort. This strategy has the potential to be implemented in clinical practice to predict a broader range of mutations and epigenetic alterations and avoid an invasive procedure in patients with comorbidities or tumors in eloquent areas. The application of the tired DL model will be instrumental to implement clinical trials testing the efficacy and safety of neoadjuvant therapy in patients with glioma."
+        "abstract": " Background: The integration of molecular profiling in the classification of gliomas is essential to inform on patients’ prognosis and guide treatment. Radiomics and Deep Learning (DL) algorithms proved cost-effective non-invasive alternatives to predict genetic alterations. However, these methodologies have limitations due to tumor heterogeneity, variability in imaging acquisition protocols, the use of tumor segmentation masks and the lack of external validation cohorts. In this study, we developed a DL-based methodology to achieve a robust molecular stratification of adult gliomas based on whole-brain 3D diagnostic, structural MRI scans. Methods: Pre-operative T1-weighted before and after gadolinium administration, T2-weighted and T2-weighted fluid-attenuated inversion recovery sequences and molecular information (IDH and 1p19q mutation status) of 870 gliomas across 14 centers were collected. Two independent DL models were implemented, optimized, and subsequently integrated into a tiered framework for classifying tumors as IDH-WT, IDH-mutant 1p/19q intact and IDH-mutant / 1p/19q co-deleted. The final classifier was tested on 227 patients across 4 centers, which were not included in the training phase. Results: In the external test set, the tiered model achieved an AUC of 0.93 [IDH-WT], 0.91 [IDH-mutant 1p/19q intact] and 0.89 [IDH-mutant 1p/19q co-deleted], improving on previous approaches. Generated attention maps of enhancing tumor regions identified IDH status; maps of non-enhancing regions distinguished 1p/19q intact from co-deleted tumors. Conclusions: We demonstrated that the tired DL model developed in this study is effective to stratify gliomas according to their IDH and 1p/19q status, relying on standard 3D MRI scans from multicenter validation cohort. This strategy has the potential to be implemented in clinical practice to predict a broader range of mutations and epigenetic alterations and avoid an invasive procedure in patients with comorbidities or tumors in eloquent areas. The application of the tired DL model will be instrumental to implement clinical trials testing the efficacy and safety of neoadjuvant therapy in patients with glioma.",
+        "article_type": "PREPRINT"
     },
     {
         "doi": "10.1097/HC9.0000000000000870",
@@ -1216,8 +1219,9 @@
             "Barone Virginia",
             "Chiariello Mario"
         ],
-        "journal": "Ovid Technologies (Wolters Kluwer Health)",
+        "journal": "Hepatology Communications, Volume: 10, Issue: 2",
         "year": 2026,
-        "abstract": "Background: Accumulation of lipids in the liver characterizes metabolic dysfunction–associated steatotic liver disease (MASLD), the most prevalent chronic liver disease worldwide. Methods: To explore the role of mitogen-activated protein kinase 15 (MAPK15) in mammalian lipid homeostasis, we created and characterized the first knockout mouse model for this gene. Hepatocellular in vitro models were also used to further investigate molecular mechanisms underlying MAPK15-dependent regulation of lipid metabolism in the liver. Results: We observed that Mapk15-/- mice exhibited liver steatosis in the context of a MASLD-like phenotype while hepatocellular in vitro models allowed to demonstrate that dysregulated accumulation of lipids was due to increased expression and membrane localization of the CD36 fatty acid translocase. Consistently, Mapk15-/- mice exhibited elevated hepatic levels of CD36 and feeding them with a western-type diet significantly accelerated their progression to a steatohepatitis-like phenotype. Importantly, transcriptomic analysis of human cohorts revealed increased liver expression of MAPK15 in MASLD patients, suggesting a compensatory role in disease progression. In this context, overexpression of this kinase efficiently opposed lipid accumulation in a MASLD hepatocellular model, opening to the possibility of counteracting hepatic steatosis in humans by pharmacologically or genetically activating this MAP kinase. Conclusions: Presented data highlight a critical role for MAPK15 in liver physiopathology, by contributing to maintaining physiological intracellular levels of lipids in this tissue."
+        "abstract": "Background: Accumulation of lipids in the liver characterizes metabolic dysfunction–associated steatotic liver disease (MASLD), the most prevalent chronic liver disease worldwide. Methods: To explore the role of mitogen-activated protein kinase 15 (MAPK15) in mammalian lipid homeostasis, we created and characterized the first knockout mouse model for this gene. Hepatocellular in vitro models were also used to further investigate molecular mechanisms underlying MAPK15-dependent regulation of lipid metabolism in the liver. Results: We observed that Mapk15-/- mice exhibited liver steatosis in the context of a MASLD-like phenotype while hepatocellular in vitro models allowed to demonstrate that dysregulated accumulation of lipids was due to increased expression and membrane localization of the CD36 fatty acid translocase. Consistently, Mapk15-/- mice exhibited elevated hepatic levels of CD36 and feeding them with a western-type diet significantly accelerated their progression to a steatohepatitis-like phenotype. Importantly, transcriptomic analysis of human cohorts revealed increased liver expression of MAPK15 in MASLD patients, suggesting a compensatory role in disease progression. In this context, overexpression of this kinase efficiently opposed lipid accumulation in a MASLD hepatocellular model, opening to the possibility of counteracting hepatic steatosis in humans by pharmacologically or genetically activating this MAP kinase. Conclusions: Presented data highlight a critical role for MAPK15 in liver physiopathology, by contributing to maintaining physiological intracellular levels of lipids in this tissue.",
+        "article_type": "JOURNAL ARTICLE"
     }
 ]

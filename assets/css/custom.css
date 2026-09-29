@@ -1,6 +1,4 @@
-/* Estilos propios del sitio CTGLab, fuera del tema base */
 
-/* Cuadrícula "Main research areas" (home, sección About) */
 .research-grid {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
@@ -95,7 +93,6 @@
 	}
 }
 
-/* Utilidades de espaciado reutilizables, en vez de style="margin-top/bottom" repetido inline */
 .section-title-center {
 	text-align: center;
 }
@@ -106,7 +103,6 @@
 	margin-bottom: 50px;
 }
 
-/* Fila de logos "In collaboration with" (antes: owl-carousel sin plugin cargado) */
 .clients-logo-row {
 	display: flex;
 	flex-wrap: wrap;
@@ -120,7 +116,6 @@
 	height: auto;
 }
 
-/* Descripción de cada herramienta en /tools/ (antes: div.p con color inline) */
 .tool-description {
 	color: #3c4043;
 }
