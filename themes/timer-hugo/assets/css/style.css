@@ -1,5 +1,5 @@
 /* ==========================================
-   1. VARIABLES & FUENTES
+   1. VARIABLES & FONTS
    ========================================== */
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700);
 @import url(https://fonts.googleapis.com/css?family=Inter:400,300,100,500,700);
@@ -32,7 +32,7 @@
 }
 
 /* ==========================================
-   2. REGLAS BASE & RESET
+   2. BASE RULES & RESET
    ========================================== */
 body {
   font-family: "Roboto", sans-serif;
@@ -87,7 +87,7 @@ iframe {
 }
 
 /* ==========================================
-   3. TIPOGRAFÍA GLOBAL Y CLASES ÚTILES
+   3. GLOBAL TYPOGRAPHY & UTILITY CLASSES
    ========================================== */
 .section-heading {
   text-align: center;
@@ -147,7 +147,7 @@ iframe {
 }
 
 /* ==========================================
-   4. NAVEGACIÓN & HEADER (TOP BAR)
+   4. NAVIGATION & HEADER (TOP BAR)
    ========================================== */
 .top-bar {
   position: fixed;
@@ -238,7 +238,7 @@ iframe {
 }
 
 /* ==========================================
-   5. HERO AREA & CABECERAS DE PÁGINA
+   5. HERO AREA & PAGE HEADERS
    ========================================== */
 #hero-area {
   background-repeat: no-repeat;
@@ -297,7 +297,7 @@ iframe {
   border-radius: 0;
 }
 
-/* CORRECCIÓN: Fondo difuminado correcto para las cabeceras */
+/* FIX: Correct blurred background for headers */
 .global-page-header {
   position: relative;
   padding: 120px 0 50px;
@@ -341,7 +341,7 @@ iframe {
 }
 
 /* ==========================================
-   6. SECCIONES: ABOUT, CALL TO ACTION & CONTACT
+   6. SECTIONS: ABOUT, CALL TO ACTION & CONTACT
    ========================================== */
 #call-to-action {
   background: #982485;
@@ -555,7 +555,7 @@ iframe {
 }
 
 /* ==========================================
-   7. GALERÍAS Y WORKS (PORTAFOLIO)
+   7. GALLERIES & WORKS (PORTFOLIO)
    ========================================== */
 .works {
   padding: 80px 0;
@@ -1003,7 +1003,7 @@ figure figcaption p {
 }
 
 /* ==========================================
-   9. BLOG & ARTÍCULOS
+   9. BLOG & ARTICLES
    ========================================== */
 #blog-full-width {
   padding: 40px 0;
@@ -1193,7 +1193,7 @@ article {
 }
 
 /* ==========================================
-   10. SECCIÓN DE NOTICIAS (NEWS)
+   10. NEWS SECTION
    ========================================== */
 .news-list {
   padding: 40px 0 80px;
@@ -1268,7 +1268,7 @@ article {
 }
 
 /* ==========================================
-   11. PUBLICACIONES (PUBLICATIONS)
+   11. PUBLICATIONS
    ========================================== */
 .publication-item {
   background: #ffffff;
@@ -1477,7 +1477,7 @@ article {
 }
 
 /* ==========================================
-   12. TARJETAS & UI COMPONENTS (ALBUM, BOTONES)
+   12. CARDS & UI COMPONENTS (ALBUM, BUTTONS)
    ========================================== */
 .card-footer {
   background: #ffffff;
@@ -1639,7 +1639,7 @@ p.card-author {
 }
 
 /* ==========================================
-   13. PÁGINA 404 & FANCYBOX
+   13. 404 PAGE & FANCYBOX
    ========================================== */
 .wrapper_404 h1 {
   font-size: 200px;
@@ -1698,7 +1698,7 @@ p.card-author {
 }
 
 /* ==========================================
-   14. EQUIPO (TEAM)
+   14. TEAM
    ========================================== */
 #team {
   margin: 0px 0;
@@ -1759,7 +1759,7 @@ p.card-author {
 }
 
 /* ==========================================
-   15. FOOTER & REDES SOCIALES
+   15. FOOTER & SOCIAL NETWORKS
    ========================================== */
 #clients {
   padding: 30px 0 60px;
