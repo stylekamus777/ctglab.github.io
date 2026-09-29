@@ -34,13 +34,13 @@ weight  = 6
 # Site Params
 [params]
 home = "Home"
-logo = "images/resized_logo.png"
+logo = "images/resized_logo.webp"
 description = "CTGLab (Computational and Translational Genomics Laboratory) develops computational tools and analyses for precision medicine and cancer genomics."
 
 # Banner Section
 [params.banner]
 enable  = true
-bgImage = "images/banner2.jpg"
+bgImage = "images/banner2.webp"
 heading = "CTGLab"
 description = "Computational and Translational Genomics Laboratory"
 # button

@@ -2,7 +2,7 @@ enable  : true
 title   : COLLABORATORS
 members  :
   - name  : Barbara Iadarola, PhD
-    image : images/team/Barbara.jpg
+    image : images/team/Barbara.webp
     designation : 
     description : Bioinformatician, Siena Imaging 
     twitter     : https://www.twitter.com
@@ -10,7 +10,7 @@ members  :
     googleplus  : https://github.com/biadarola
 
   - name  : Giulia Brunelli, PhD
-    image : images/team/giulia.jpg
+    image : images/team/giulia.webp
     designation : Statistician,Cogitars GmbH
     description : 
     twitter     : https://www.twitter.com
@@ -18,7 +18,7 @@ members  :
     googleplus  : https://github.com
 
   - name  : Maurizio Podda, PhD
-    image : images/team/maurizio.jpg
+    image : images/team/maurizio.webp
     designation : Bioinformatician, IFC-CNR
     description :  
     twitter     : https://www.twitter.com
@@ -26,7 +26,7 @@ members  :
     googleplus  : https://github.com/mspodda
   
   - name  : Mohamad Elrifai
-    image : images/team/mohamad.jpg
+    image : images/team/mohamad.webp
     designation : Pharmacist, Post graduate Fellowship
     description : 
     twitter     : https://www.twitter.com
@@ -34,7 +34,7 @@ members  :
     googleplus  : https://github.com/mohamadelrifai
 
   - name  : Elia Ceroni, PhD
-    image : images/team/elia.jpg
+    image : images/team/elia.webp
     designation : IT engineer, Research Fellow
     description : 
     twitter     : https://www.twitter.com
@@ -42,7 +42,7 @@ members  :
     googleplus  : https://github.com/fhgre
 
   - name  : Francesco Paparazzo, PhD
-    image : images/team/fra.jpg
+    image : images/team/fra.webp
     designation : Biologist, Research Fellow
     description : 
     twitter     : https://www.twitter.com
@@ -50,7 +50,7 @@ members  :
     googleplus  : https://github.com/Francesco85P
 
   - name  : Danilo Tatoni
-    image : images/team/danilo.png
+    image : images/team/danilo.webp
     designation : Biotechnologist, PhD Student
     description : 
     twitter     : https://www.x.com/danilotat

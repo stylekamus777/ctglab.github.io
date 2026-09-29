@@ -2,7 +2,7 @@ enable  : true
 title   : THE TEAM
 members  :
   - name  : Romina D'Aurizio, PhD
-    image : images/team/romina.jpg
+    image : images/team/romina.webp
     designation : Mathematician, PI
     description : 
     twitter     : https://www.twitter.com
@@ -10,7 +10,7 @@ members  :
     googleplus  : https://github.com
   
   - name  : Valeria Repetto
-    image : images/team/valeria.png
+    image : images/team/valeria.webp
     designation : Physicist, PhD Student
     description : 
     twitter     : https://www.twitter.com
@@ -18,7 +18,7 @@ members  :
     googleplus  : https://github.com
 
   - name  : Tommaso Ducci 
-    image : images/team/tommaso.png
+    image : images/team/tommaso.webp
     designation : Biomedical engineer, PhD Student
     description : 
     twitter     : https://www.twitter.com
@@ -26,7 +26,7 @@ members  :
     googleplus  : https://github.com/TommasoDucci
   
   - name  : Manel Hmida 
-    image : images/team/manel.png
+    image : images/team/manel.webp
     designation : Data Scientist, PhD Student
     description : 
     twitter     : https://www.twitter.com
