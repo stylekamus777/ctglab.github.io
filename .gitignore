@@ -5,4 +5,9 @@ public/
 ._*
 .Trashes
 .venv/
-
+resources/_gen/
+.hugo_build.lock
+.vscode/
+*.swp
+*.swo
+Thumbs.db
