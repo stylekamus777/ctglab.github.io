@@ -18,6 +18,18 @@ The repository includes custom Bash scripts designed to streamline technical mai
 
 * **`convert_to_webp.sh`**: Mass-converts all images in the static directory to WebP format (with optimized 80% quality), removes old original formats, and automatically updates extension references across content, data, and layout files.
 * **`audit_unused.sh`**: Audit utility that scans project files to detect potential orphaned or unused graphic assets, enabling a manual and secure review before cleaning up space.
+  
+### Running the Scripts
+
+If you encounter a `Permission denied` error when running the scripts for the first time, grant execution permissions or invoke them via Bash directly:
+
+
+### Option 1: Grant execution permissions (one-time setup)
+`chmod +x convert_to_webp.sh audit_unused.sh`
+
+### Option 2: Run directly using the Bash interpreter
+`bash convert_to_webp.sh`
+`bash audit_unused.sh`
 
 ## Deployment
 

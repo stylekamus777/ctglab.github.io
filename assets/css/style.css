@@ -1217,12 +1217,13 @@ article {
 }
 
 .news-card-image {
-  flex: 0 0 42%;
-  width: 42%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  border-radius: 12px 0 0 12px !important;
+    flex: 0 0 42%;
+    width: 42%;
+    height: 100%;
+    object-fit: contain;
+    background-color: #f8f9fa; 
+    display: block;
+    border-radius: 12px 0 0 12px !important;
 }
 
 .news-card-content {
